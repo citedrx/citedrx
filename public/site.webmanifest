@@ -1,0 +1,10 @@
+{
+  "name": "CitedRx",
+  "short_name": "CitedRx",
+  "icons": [
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "theme_color": "#0f6e5c",
+  "background_color": "#f7f9f8",
+  "display": "standalone"
+}
