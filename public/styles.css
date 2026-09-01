@@ -490,3 +490,62 @@ table.data-table .src-link { font-size: 0.82rem; white-space: nowrap; }
 }
 .category-card.upcoming h3 { font-size: 1.05rem; color: var(--ink-soft); }
 .category-card.upcoming p { color: var(--ink-soft); font-size: 0.9rem; max-width: 520px; margin: 8px auto 0; }
+
+/* CitedRx Score badge */
+.score-badge {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 3px;
+  background: var(--brand);
+  color: #fff;
+  font-weight: 800;
+  padding: 4px 11px;
+  border-radius: 8px;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+.score-badge .of10 { font-size: 0.7rem; font-weight: 600; opacity: 0.85; }
+.score-badge.mid { background: var(--gold); }
+.score-badge.low { background: #a13a2b; }
+.score-sub { font-size: 0.76rem; color: var(--ink-soft); margin-left: 2px; }
+
+.best-for {
+  display: inline-block;
+  background: var(--brand-soft);
+  color: var(--brand-dark);
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 6px;
+  margin: 8px 0 0;
+}
+.evidence-note {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  background: var(--bg);
+  border-left: 3px solid var(--brand);
+  padding: 8px 12px;
+  margin-top: 12px;
+  border-radius: 0 6px 6px 0;
+}
+.evidence-note a { font-weight: 600; }
+.reg-flag {
+  display: inline-block;
+  background: #fbe9e7;
+  color: #a13a2b;
+  font-size: 0.76rem;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: 6px;
+  margin-top: 8px;
+}
+
+/* Score methodology breakdown */
+.score-method-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin: 20px 0; }
+@media (max-width: 760px) { .score-method-grid { grid-template-columns: repeat(2, 1fr); } }
+.score-method-item { background: var(--bg); border: 1px solid var(--line); border-radius: 10px; padding: 14px; text-align: center; }
+.score-method-item .pts { font-size: 1.3rem; font-weight: 800; color: var(--brand-dark); }
+.score-method-item .label { font-size: 0.78rem; color: var(--ink-soft); margin-top: 2px; }
+
+/* Full comparison table score cell */
+table.data-table td.score-cell { white-space: nowrap; }
