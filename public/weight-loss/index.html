@@ -11,6 +11,22 @@
     gtag('js', new Date());
     gtag('config', 'G-Q2RZ3GMRJX');
   </script>
+  <script>
+    // Tracks clickouts to provider sites: which provider, and where on the
+    // page it was clicked (featured card vs. comparison table). Device and
+    // geo are captured automatically by GA4 on every event — no need to
+    // detect them here.
+    document.addEventListener('click', function (e) {
+      var link = e.target.closest('a[data-provider]');
+      if (!link || typeof gtag !== 'function') return;
+      gtag('event', 'clickout', {
+        provider: link.getAttribute('data-provider'),
+        placement: link.getAttribute('data-placement'),
+        page_path: location.pathname,
+        link_url: link.href
+      });
+    });
+  </script>
   <title>GLP-1 Telehealth Providers, Scored Out of 10 — CitedRx</title>
   <link rel="canonical" href="https://citedrx.com/weight-loss/">
   <meta name="description" content="CitedRx scores 14 GLP-1 weight loss telehealth providers out of 10, built from clinical trial evidence — not marketing claims or paid placement.">
@@ -192,7 +208,7 @@
             <p class="evidence-note">Because Ro prescribes predominantly branded product, the STEP, SURMOUNT, and SELECT trial evidence in our <a href="/research/weight-loss/">research library</a> applies directly to what you'd likely be prescribed.</p>
           </div>
           <div class="rank-cta">
-            <a class="btn small" href="https://ro.co/" target="_blank" rel="noopener noreferrer sponsored">Visit Ro</a>
+            <a class="btn small" href="https://ro.co/" target="_blank" rel="noopener noreferrer sponsored" data-provider="Ro" data-placement="featured_card">Visit Ro</a>
           </div>
         </article>
 
@@ -211,7 +227,7 @@
             <p class="evidence-note">LifeMD's branded-only focus means the trial evidence below applies directly to what's prescribed &mdash; there's no compounded tier to distinguish between.</p>
           </div>
           <div class="rank-cta">
-            <a class="btn small" href="https://lifemd.com/" target="_blank" rel="noopener noreferrer sponsored">Visit LifeMD</a>
+            <a class="btn small" href="https://lifemd.com/" target="_blank" rel="noopener noreferrer sponsored" data-provider="LifeMD" data-placement="featured_card">Visit LifeMD</a>
           </div>
         </article>
 
@@ -230,7 +246,7 @@
             <p class="evidence-note">Brand-name-only prescribing means the STEP/SURMOUNT/SELECT evidence applies directly &mdash; the differentiator here is the coaching infrastructure layered on top, not the medication itself.</p>
           </div>
           <div class="rank-cta">
-            <a class="btn small" href="https://www.weightwatchers.com/" target="_blank" rel="noopener noreferrer sponsored">Visit WeightWatchers Clinic</a>
+            <a class="btn small" href="https://www.weightwatchers.com/" target="_blank" rel="noopener noreferrer sponsored" data-provider="WeightWatchers Clinic" data-placement="featured_card">Visit WeightWatchers Clinic</a>
           </div>
         </article>
 
@@ -249,7 +265,7 @@
             <p class="evidence-note">Found's branded tier is covered directly by the trial evidence in our research library; its compounded tier is not &mdash; ask which one you'd actually be prescribed.</p>
           </div>
           <div class="rank-cta">
-            <a class="btn small" href="https://joinfound.com/" target="_blank" rel="noopener noreferrer sponsored">Visit Found</a>
+            <a class="btn small" href="https://joinfound.com/" target="_blank" rel="noopener noreferrer sponsored" data-provider="Found" data-placement="featured_card">Visit Found</a>
           </div>
         </article>
 
@@ -268,7 +284,7 @@
             <p class="evidence-note">Applies directly only on Noom Med's branded plans; its compounded plans fall outside what STEP/SURMOUNT actually tested. See the full evidence-tier breakdown in our research library.</p>
           </div>
           <div class="rank-cta">
-            <a class="btn small" href="https://www.noom.com/" target="_blank" rel="noopener noreferrer sponsored">Visit Noom Med</a>
+            <a class="btn small" href="https://www.noom.com/" target="_blank" rel="noopener noreferrer sponsored" data-provider="Noom Med" data-placement="featured_card">Visit Noom Med</a>
           </div>
         </article>
 
@@ -285,20 +301,20 @@
             <tr><th>#</th><th>Provider</th><th>CitedRx Score</th><th>Medication tier</th><th>Best for</th><th>From</th></tr>
           </thead>
           <tbody>
-            <tr><td class="num">1</td><td><a href="https://ro.co/" target="_blank" rel="noopener noreferrer sponsored"><strong>Ro</strong></a></td><td class="score-cell"><span class="score-badge">9.3<span class="of10">/10</span></span></td><td><span class="tier-badge tier-branded">Branded-primary</span></td><td>Broadest branded selection + insurance coordination</td><td>$99/mo</td></tr>
-            <tr><td class="num">2</td><td><a href="https://lifemd.com/" target="_blank" rel="noopener noreferrer sponsored"><strong>LifeMD</strong></a></td><td class="score-cell"><span class="score-badge">9.1<span class="of10">/10</span></span></td><td><span class="tier-badge tier-branded">Branded-primary</span></td><td>Lowest-friction path to brand-name GLP-1s</td><td>Varies by plan</td></tr>
-            <tr><td class="num">3</td><td><a href="https://www.weightwatchers.com/" target="_blank" rel="noopener noreferrer sponsored"><strong>WeightWatchers Clinic</strong></a></td><td class="score-cell"><span class="score-badge">9.0<span class="of10">/10</span></span></td><td><span class="tier-badge tier-branded">Branded-primary</span></td><td>Medication + structured nutrition coaching</td><td>Varies by plan</td></tr>
-            <tr><td class="num">4</td><td><a href="https://joinfound.com/" target="_blank" rel="noopener noreferrer sponsored"><strong>Found</strong></a></td><td class="score-cell"><span class="score-badge">8.3<span class="of10">/10</span></span></td><td><span class="tier-badge tier-mixed">Mixed</span></td><td>Insurance support + included coaching</td><td>$49&ndash;$99/mo</td></tr>
-            <tr><td class="num">5</td><td><a href="https://www.noom.com/" target="_blank" rel="noopener noreferrer sponsored"><strong>Noom Med</strong></a></td><td class="score-cell"><span class="score-badge mid">7.2<span class="of10">/10</span></span></td><td><span class="tier-badge tier-mixed">Mixed</span></td><td>Behavior-change coaching alongside medication</td><td>$149/mo</td></tr>
-            <tr><td class="num">6</td><td><a href="https://joinmochi.com/" target="_blank" rel="noopener noreferrer sponsored"><strong>Mochi Health</strong></a></td><td class="score-cell"><span class="score-badge mid">6.5<span class="of10">/10</span></span></td><td><span class="tier-badge tier-mixed">Mixed</span></td><td>Quarterly clinical monitoring at a lower price</td><td>$99/mo + membership</td></tr>
-            <tr><td class="num">7</td><td><a href="https://www.joincalibrate.com/" target="_blank" rel="noopener noreferrer sponsored"><strong>Calibrate</strong></a></td><td class="score-cell"><span class="score-badge mid">5.3<span class="of10">/10</span></span></td><td><span class="tier-badge tier-unconfirmed">Unconfirmed</span></td><td>Highest-touch, specialist-led care</td><td>Varies by plan</td></tr>
-            <tr><td class="num">8</td><td><a href="https://trimrx.com/" target="_blank" rel="noopener noreferrer sponsored"><strong>TrimRx</strong></a></td><td class="score-cell"><span class="score-badge low">5.0<span class="of10">/10</span></span></td><td><span class="tier-badge tier-mixed">Mixed</span></td><td>Choosing between compounded and brand-name in one place</td><td>$174/mo</td></tr>
-            <tr><td class="num">9</td><td><a href="https://medvi-us.org/" target="_blank" rel="noopener noreferrer sponsored"><strong>Medvi</strong></a></td><td class="score-cell"><span class="score-badge low">4.9<span class="of10">/10</span></span></td><td><span class="tier-badge tier-mixed">Mixed</span></td><td>Transparent cash-pay pricing</td><td>$179 first mo</td></tr>
-            <tr><td class="num">10</td><td><a href="https://directmeds.com/" target="_blank" rel="noopener noreferrer sponsored"><strong>DirectMeds</strong></a></td><td class="score-cell"><span class="score-badge low">4.7<span class="of10">/10</span></span></td><td><span class="tier-badge tier-compounded">Compounded-primary</span></td><td>Large-scale, LegitScript-certified compounded access</td><td>$249/mo</td></tr>
-            <tr><td class="num">11</td><td><a href="https://www.altrx.com/" target="_blank" rel="noopener noreferrer sponsored"><strong>AltRx</strong></a></td><td class="score-cell"><span class="score-badge low">4.5<span class="of10">/10</span></span></td><td><span class="tier-badge tier-mixed">Mixed</span></td><td>Full branded + compounded menu in one plan</td><td>$89/mo</td></tr>
-            <tr><td class="num">12</td><td><a href="https://www.youembody.com/" target="_blank" rel="noopener noreferrer sponsored"><strong>Embody</strong></a></td><td class="score-cell"><span class="score-badge low">3.8<span class="of10">/10</span></span></td><td><span class="tier-badge tier-compounded">Compounded-primary</span></td><td>Lowest advertised compounded price</td><td>$69/mo</td></tr>
-            <tr><td class="num">13</td><td><a href="https://trytrimi.com/" target="_blank" rel="noopener noreferrer sponsored"><strong>Trimi</strong></a></td><td class="score-cell"><span class="score-badge low">2.8<span class="of10">/10</span></span></td><td><span class="tier-badge tier-compounded">Compounded-primary</span></td><td>Simple flat-rate compounded pricing</td><td>$99/mo</td></tr>
-            <tr><td class="num">14</td><td><a href="https://henrymeds.com/" target="_blank" rel="noopener noreferrer sponsored"><strong>Henry Meds</strong></a></td><td class="score-cell"><span class="score-badge low">2.3<span class="of10">/10</span></span></td><td><span class="tier-badge tier-compounded">Compounded-primary</span></td><td>Fastest, lowest-friction intake</td><td>$179/mo</td></tr>
+            <tr><td class="num">1</td><td><a href="https://ro.co/" target="_blank" rel="noopener noreferrer sponsored" data-provider="Ro" data-placement="comparison_table"><strong>Ro</strong></a></td><td class="score-cell"><span class="score-badge">9.3<span class="of10">/10</span></span></td><td><span class="tier-badge tier-branded">Branded-primary</span></td><td>Broadest branded selection + insurance coordination</td><td>$99/mo</td></tr>
+            <tr><td class="num">2</td><td><a href="https://lifemd.com/" target="_blank" rel="noopener noreferrer sponsored" data-provider="LifeMD" data-placement="comparison_table"><strong>LifeMD</strong></a></td><td class="score-cell"><span class="score-badge">9.1<span class="of10">/10</span></span></td><td><span class="tier-badge tier-branded">Branded-primary</span></td><td>Lowest-friction path to brand-name GLP-1s</td><td>Varies by plan</td></tr>
+            <tr><td class="num">3</td><td><a href="https://www.weightwatchers.com/" target="_blank" rel="noopener noreferrer sponsored" data-provider="WeightWatchers Clinic" data-placement="comparison_table"><strong>WeightWatchers Clinic</strong></a></td><td class="score-cell"><span class="score-badge">9.0<span class="of10">/10</span></span></td><td><span class="tier-badge tier-branded">Branded-primary</span></td><td>Medication + structured nutrition coaching</td><td>Varies by plan</td></tr>
+            <tr><td class="num">4</td><td><a href="https://joinfound.com/" target="_blank" rel="noopener noreferrer sponsored" data-provider="Found" data-placement="comparison_table"><strong>Found</strong></a></td><td class="score-cell"><span class="score-badge">8.3<span class="of10">/10</span></span></td><td><span class="tier-badge tier-mixed">Mixed</span></td><td>Insurance support + included coaching</td><td>$49&ndash;$99/mo</td></tr>
+            <tr><td class="num">5</td><td><a href="https://www.noom.com/" target="_blank" rel="noopener noreferrer sponsored" data-provider="Noom Med" data-placement="comparison_table"><strong>Noom Med</strong></a></td><td class="score-cell"><span class="score-badge mid">7.2<span class="of10">/10</span></span></td><td><span class="tier-badge tier-mixed">Mixed</span></td><td>Behavior-change coaching alongside medication</td><td>$149/mo</td></tr>
+            <tr><td class="num">6</td><td><a href="https://joinmochi.com/" target="_blank" rel="noopener noreferrer sponsored" data-provider="Mochi Health" data-placement="comparison_table"><strong>Mochi Health</strong></a></td><td class="score-cell"><span class="score-badge mid">6.5<span class="of10">/10</span></span></td><td><span class="tier-badge tier-mixed">Mixed</span></td><td>Quarterly clinical monitoring at a lower price</td><td>$99/mo + membership</td></tr>
+            <tr><td class="num">7</td><td><a href="https://www.joincalibrate.com/" target="_blank" rel="noopener noreferrer sponsored" data-provider="Calibrate" data-placement="comparison_table"><strong>Calibrate</strong></a></td><td class="score-cell"><span class="score-badge mid">5.3<span class="of10">/10</span></span></td><td><span class="tier-badge tier-unconfirmed">Unconfirmed</span></td><td>Highest-touch, specialist-led care</td><td>Varies by plan</td></tr>
+            <tr><td class="num">8</td><td><a href="https://trimrx.com/" target="_blank" rel="noopener noreferrer sponsored" data-provider="TrimRx" data-placement="comparison_table"><strong>TrimRx</strong></a></td><td class="score-cell"><span class="score-badge low">5.0<span class="of10">/10</span></span></td><td><span class="tier-badge tier-mixed">Mixed</span></td><td>Choosing between compounded and brand-name in one place</td><td>$174/mo</td></tr>
+            <tr><td class="num">9</td><td><a href="https://medvi-us.org/" target="_blank" rel="noopener noreferrer sponsored" data-provider="Medvi" data-placement="comparison_table"><strong>Medvi</strong></a></td><td class="score-cell"><span class="score-badge low">4.9<span class="of10">/10</span></span></td><td><span class="tier-badge tier-mixed">Mixed</span></td><td>Transparent cash-pay pricing</td><td>$179 first mo</td></tr>
+            <tr><td class="num">10</td><td><a href="https://directmeds.com/" target="_blank" rel="noopener noreferrer sponsored" data-provider="DirectMeds" data-placement="comparison_table"><strong>DirectMeds</strong></a></td><td class="score-cell"><span class="score-badge low">4.7<span class="of10">/10</span></span></td><td><span class="tier-badge tier-compounded">Compounded-primary</span></td><td>Large-scale, LegitScript-certified compounded access</td><td>$249/mo</td></tr>
+            <tr><td class="num">11</td><td><a href="https://www.altrx.com/" target="_blank" rel="noopener noreferrer sponsored" data-provider="AltRx" data-placement="comparison_table"><strong>AltRx</strong></a></td><td class="score-cell"><span class="score-badge low">4.5<span class="of10">/10</span></span></td><td><span class="tier-badge tier-mixed">Mixed</span></td><td>Full branded + compounded menu in one plan</td><td>$89/mo</td></tr>
+            <tr><td class="num">12</td><td><a href="https://www.youembody.com/" target="_blank" rel="noopener noreferrer sponsored" data-provider="Embody" data-placement="comparison_table"><strong>Embody</strong></a></td><td class="score-cell"><span class="score-badge low">3.8<span class="of10">/10</span></span></td><td><span class="tier-badge tier-compounded">Compounded-primary</span></td><td>Lowest advertised compounded price</td><td>$69/mo</td></tr>
+            <tr><td class="num">13</td><td><a href="https://trytrimi.com/" target="_blank" rel="noopener noreferrer sponsored" data-provider="Trimi" data-placement="comparison_table"><strong>Trimi</strong></a></td><td class="score-cell"><span class="score-badge low">2.8<span class="of10">/10</span></span></td><td><span class="tier-badge tier-compounded">Compounded-primary</span></td><td>Simple flat-rate compounded pricing</td><td>$99/mo</td></tr>
+            <tr><td class="num">14</td><td><a href="https://henrymeds.com/" target="_blank" rel="noopener noreferrer sponsored" data-provider="Henry Meds" data-placement="comparison_table"><strong>Henry Meds</strong></a></td><td class="score-cell"><span class="score-badge low">2.3<span class="of10">/10</span></span></td><td><span class="tier-badge tier-compounded">Compounded-primary</span></td><td>Fastest, lowest-friction intake</td><td>$179/mo</td></tr>
           </tbody>
         </table>
       </div>
