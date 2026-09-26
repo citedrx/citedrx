@@ -1,3 +1,5 @@
+import { handleWeightLossMatch } from "./agent/weight-loss-match.js";
+
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
@@ -14,6 +16,10 @@ export default {
 
     if (changed) {
       return Response.redirect(url.toString(), 301);
+    }
+
+    if (url.pathname === "/api/weight-loss-match") {
+      return handleWeightLossMatch(request, env);
     }
 
     return env.ASSETS.fetch(request);
