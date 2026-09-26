@@ -196,20 +196,19 @@ To start: what matters most to you right now, a lower monthly price, using insur
           headers: { 'content-type': 'application/json' },
           body: JSON.stringify({ messages: messages })
         })
-          .then(function (res) { return res.json().then(function (data) { return { status: res.status, data: data }; }); })
-          .then(function (result) {
+          .then(function (res) { return res.json(); })
+          .then(function (data) {
             typingEl.remove();
-            if (result.data.error) {
-              // TEMPORARY debug output while wiring up the agent; remove once confirmed working.
-              addBubble('agent', "[debug] HTTP " + result.status + ": " + result.data.error + (result.data.detail ? " | " + result.data.detail : ""));
+            if (data.error) {
+              addBubble('agent', "Sorry, something went wrong on my end. You can browse the full comparison table directly instead: citedrx.com/weight-loss/");
               return;
             }
-            addBubble('agent', result.data.reply);
-            messages.push({ role: 'assistant', content: result.data.reply });
+            addBubble('agent', data.reply);
+            messages.push({ role: 'assistant', content: data.reply });
           })
-          .catch(function (err) {
+          .catch(function () {
             typingEl.remove();
-            addBubble('agent', "[debug] fetch failed: " + err.message);
+            addBubble('agent', "Sorry, something went wrong on my end. You can browse the full comparison table directly instead: citedrx.com/weight-loss/");
           })
           .finally(function () {
             input.disabled = false;
