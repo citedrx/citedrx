@@ -1,4 +1,4 @@
-import { handleWeightLossMatch } from "./agent/weight-loss-match.js";
+import { handleMatch } from "./agent/match.js";
 
 export default {
   async fetch(request, env) {
@@ -18,8 +18,9 @@ export default {
       return Response.redirect(url.toString(), 301);
     }
 
-    if (url.pathname === "/api/weight-loss-match") {
-      return handleWeightLossMatch(request, env);
+    const matchRoute = url.pathname.match(/^\/api\/match\/([a-z-]+)\/?$/);
+    if (matchRoute) {
+      return handleMatch(request, env, matchRoute[1]);
     }
 
     return env.ASSETS.fetch(request);

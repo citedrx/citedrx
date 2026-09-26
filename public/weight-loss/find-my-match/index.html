@@ -154,6 +154,12 @@ To start: what matters most to you right now, a lower monthly price, using insur
 
   <script>
     (function () {
+      // To reuse this page for another vertical: copy this file to
+      // /{vertical}/find-my-match/, update this constant to match the
+      // registry slug in src/data/providers/index.js, and update the
+      // visible copy above (title, h1, intro paragraph, opening bubble).
+      var VERTICAL = 'weight-loss';
+
       var messages = [
         { role: "assistant", content: document.querySelector('.chat-bubble.agent').textContent.trim() }
       ];
@@ -185,7 +191,7 @@ To start: what matters most to you right now, a lower monthly price, using insur
         var typingEl = addBubble('agent', 'Thinking...');
         typingEl.classList.add('typing');
 
-        fetch('/api/weight-loss-match', {
+        fetch('/api/match/' + VERTICAL, {
           method: 'POST',
           headers: { 'content-type': 'application/json' },
           body: JSON.stringify({ messages: messages })
