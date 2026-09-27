@@ -745,6 +745,21 @@ footer.site .wrap { align-items: flex-start; flex-wrap: wrap; gap: 32px 48px; }
   overflow: hidden;
   box-shadow: 0 8px 24px rgba(16, 36, 31, 0.06);
 }
+.chat-toolbar {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 14px 0;
+}
+.chat-reset-btn {
+  background: none;
+  border: none;
+  color: var(--ink-soft);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 4px 6px;
+}
+.chat-reset-btn:hover { color: var(--brand-dark); }
 .chat-messages {
   height: 460px;
   overflow-y: auto;

@@ -105,6 +105,9 @@
 
     <div class="wrap" style="margin-top:8px;">
       <div class="chat-shell">
+        <div class="chat-toolbar">
+          <button type="button" id="chat-reset" class="chat-reset-btn">&#8635; Start over</button>
+        </div>
         <div class="chat-messages" id="chat-messages">
           <div class="chat-bubble agent">Hi, I'm CitedRx's matcher. I'll ask a couple of quick questions, then recommend from the 15 GLP-1 providers we score, based on what actually fits you.
 
@@ -162,13 +165,13 @@ To start: what matters most to you right now, a lower monthly price, using insur
       var VERTICAL = 'weight-loss';
       var COMPARISON_URL = 'https://citedrx.com/weight-loss/';
 
-      var messages = [
-        { role: "assistant", content: document.querySelector('.chat-bubble.agent').textContent.trim() }
-      ];
+      var GREETING = document.querySelector('.chat-bubble.agent').textContent.trim();
+      var messages = [{ role: "assistant", content: GREETING }];
       var messagesEl = document.getElementById('chat-messages');
       var form = document.getElementById('chat-form');
       var input = document.getElementById('chat-input');
       var sendBtn = document.getElementById('chat-send');
+      var resetBtn = document.getElementById('chat-reset');
 
       function escapeHtml(s) {
         return s
@@ -247,6 +250,16 @@ To start: what matters most to you right now, a lower monthly price, using insur
             sendBtn.disabled = false;
             input.focus();
           });
+      });
+
+      resetBtn.addEventListener('click', function () {
+        messages = [{ role: 'assistant', content: GREETING }];
+        messagesEl.innerHTML = '';
+        addBubble('agent', GREETING, true);
+        input.value = '';
+        input.disabled = false;
+        sendBtn.disabled = false;
+        input.focus();
       });
     })();
   </script>
