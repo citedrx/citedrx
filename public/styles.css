@@ -227,6 +227,13 @@ section { padding: 56px 0; }
 .cta-band p { margin: 0 0 24px; opacity: 0.92; }
 .cta-band .btn { background: #fff; color: var(--brand-dark); }
 .cta-band .btn:hover { background: #f0f0f0; }
+.cta-band .actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.cta-band .btn.ghost {
+  background: transparent;
+  color: #fff;
+  border: 1.5px solid rgba(255, 255, 255, 0.6);
+}
+.cta-band .btn.ghost:hover { background: rgba(255, 255, 255, 0.12); }
 
 /* Footer */
 footer.site {
