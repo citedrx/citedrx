@@ -5,7 +5,7 @@ export default {
   vertical: "weight-loss",
   label: "GLP-1 Weight Loss",
   topic: "GLP-1 weight-loss telehealth providers",
-  comparisonUrl: "citedrx.com/weight-loss/",
+  comparisonUrl: "https://citedrx.com/weight-loss/",
   methodology: {
     scale: "0-10, 5 factors: Evidence Match (4 pts), Independent Rating (2 pts), Insurance & Support (2 pts), Clinical Support Model (1 pt), Regulatory Standing (1 pt).",
     note: "Evidence Match rewards branded-primary prescribing (the exact product tested in STEP/SURMOUNT/SELECT trials) over compounded, which is not individually FDA-reviewed. Score order is never adjusted for referral payment.",

@@ -155,10 +155,12 @@ To start: what matters most to you right now, a lower monthly price, using insur
   <script>
     (function () {
       // To reuse this page for another vertical: copy this file to
-      // /{vertical}/find-my-match/, update this constant to match the
-      // registry slug in src/data/providers/index.js, and update the
-      // visible copy above (title, h1, intro paragraph, opening bubble).
+      // /{vertical}/find-my-match/, update these two constants to match
+      // the registry slug in src/data/providers/index.js and that
+      // vertical's comparison page, and update the visible copy above
+      // (title, h1, intro paragraph, opening bubble).
       var VERTICAL = 'weight-loss';
+      var COMPARISON_URL = 'https://citedrx.com/weight-loss/';
 
       var messages = [
         { role: "assistant", content: document.querySelector('.chat-bubble.agent').textContent.trim() }
@@ -168,13 +170,43 @@ To start: what matters most to you right now, a lower monthly price, using insur
       var input = document.getElementById('chat-input');
       var sendBtn = document.getElementById('chat-send');
 
-      function addBubble(role, text) {
+      function escapeHtml(s) {
+        return s
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&#39;');
+      }
+
+      // Renders agent replies as safe HTML: escapes everything, then turns
+      // markdown links into real CTA buttons and **bold** into <strong>.
+      // No other markdown is supported (the system prompt is instructed
+      // to stick to just these two).
+      function renderAgentHtml(text) {
+        var html = escapeHtml(text);
+        html = html.replace(/\[([^\[\]]+)\]\((https?:\/\/[^\s)]+)\)/g, function (match, label, url) {
+          return '<a href="' + url + '" target="_blank" rel="noopener noreferrer" class="chat-link">' + label + ' &rarr;</a>';
+        });
+        html = html.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+        return html;
+      }
+
+      function addBubble(role, text, isHtml) {
         var div = document.createElement('div');
         div.className = 'chat-bubble ' + (role === 'user' ? 'user' : 'agent');
-        div.textContent = text;
+        if (isHtml) {
+          div.innerHTML = renderAgentHtml(text);
+        } else {
+          div.textContent = text;
+        }
         messagesEl.appendChild(div);
         messagesEl.scrollTop = messagesEl.scrollHeight;
         return div;
+      }
+
+      function addFallbackError() {
+        addBubble('agent', "Sorry, something went wrong on my end. You can browse [the full comparison table](" + COMPARISON_URL + ") directly instead.", true);
       }
 
       form.addEventListener('submit', function (e) {
@@ -200,15 +232,15 @@ To start: what matters most to you right now, a lower monthly price, using insur
           .then(function (data) {
             typingEl.remove();
             if (data.error) {
-              addBubble('agent', "Sorry, something went wrong on my end. You can browse the full comparison table directly instead: citedrx.com/weight-loss/");
+              addFallbackError();
               return;
             }
-            addBubble('agent', data.reply);
+            addBubble('agent', data.reply, true);
             messages.push({ role: 'assistant', content: data.reply });
           })
           .catch(function () {
             typingEl.remove();
-            addBubble('agent', "Sorry, something went wrong on my end. You can browse the full comparison table directly instead: citedrx.com/weight-loss/");
+            addFallbackError();
           })
           .finally(function () {
             input.disabled = false;

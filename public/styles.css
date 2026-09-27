@@ -802,6 +802,19 @@ footer.site .wrap { align-items: flex-start; flex-wrap: wrap; gap: 32px 48px; }
 }
 .chat-input-row button:hover { background: var(--brand-dark); }
 .chat-input-row button:disabled { opacity: 0.5; cursor: not-allowed; }
+.chat-link {
+  display: inline-block;
+  background: var(--brand);
+  color: #fff !important;
+  text-decoration: none !important;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 7px 16px;
+  border-radius: 999px;
+  margin: 4px 4px 2px 0;
+  transition: background 0.15s;
+}
+.chat-link:hover { background: var(--brand-dark); }
 .chat-disclaimer {
   max-width: 680px;
   margin: 16px auto 0;
