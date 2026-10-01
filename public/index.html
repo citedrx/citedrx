@@ -11,6 +11,18 @@
     gtag('js', new Date());
     gtag('config', 'G-Q2RZ3GMRJX');
   </script>
+  <script>
+    document.addEventListener('click', function (e) {
+      var link = e.target.closest('a[data-provider]');
+      if (!link || typeof gtag !== 'function') return;
+      gtag('event', 'clickout', {
+        provider: link.getAttribute('data-provider'),
+        placement: link.getAttribute('data-placement'),
+        page_path: location.pathname,
+        link_url: link.href
+      });
+    });
+  </script>
   <title>CitedRx: Telehealth Providers &amp; Clinical Trials, Explained</title>
   <meta name="description" content="CitedRx scores telehealth providers across 7 categories and explains the clinical trials behind them in plain language, fully cited.">
   <meta property="og:type" content="website">
@@ -112,6 +124,66 @@
         <span>Same 5 scoring factors, every category</span>
       </div>
     </div>
+
+    <section id="top-weight-loss">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>This week's top-rated: GLP-1 weight loss</h2>
+          <p>Our most-trafficked category, scored on STEP, SURMOUNT, and SELECT trial evidence, not star averages.</p>
+        </div>
+        <div class="rank-list">
+          <article class="rank-card top">
+            <div class="rank-num">1</div>
+            <div class="rank-body">
+              <h3>Ro <span class="score-badge">9.3<span class="of10">/10</span></span></h3>
+              <span class="best-for">Best for: broadest branded medication selection + insurance coordination</span>
+              <div class="rank-facts">
+                <div><strong>From $99/mo</strong>Compounded cash-pay tier</div>
+                <div><strong>Branded-primary</strong>Medication tier</div>
+                <div><strong>Yes</strong>Prior-auth team</div>
+                <div><strong>4.4/5</strong>U.S. News rating</div>
+              </div>
+            </div>
+            <div class="rank-cta">
+              <a class="btn small" href="https://ro.co/" target="_blank" rel="noopener noreferrer sponsored" data-provider="Ro" data-placement="homepage_top3">Visit Ro</a>
+            </div>
+          </article>
+          <article class="rank-card top">
+            <div class="rank-num">2</div>
+            <div class="rank-body">
+              <h3>LifeMD <span class="score-badge">9.1<span class="of10">/10</span></span></h3>
+              <span class="best-for">Best for: lowest-friction path to brand-name GLP-1s</span>
+              <div class="rank-facts">
+                <div><strong>Varies by plan</strong>Brand-name GLP-1 access</div>
+                <div><strong>Branded-primary</strong>Medication tier</div>
+                <div><strong>Yes</strong>Prior-auth team</div>
+                <div><strong>4.0/5</strong>U.S. News rating</div>
+              </div>
+            </div>
+            <div class="rank-cta">
+              <a class="btn small" href="https://lifemd.com/" target="_blank" rel="noopener noreferrer sponsored" data-provider="LifeMD" data-placement="homepage_top3">Visit LifeMD</a>
+            </div>
+          </article>
+          <article class="rank-card top">
+            <div class="rank-num">3</div>
+            <div class="rank-body">
+              <h3>WeightWatchers Clinic <span class="score-badge">9.0<span class="of10">/10</span></span></h3>
+              <span class="best-for">Best for: combining medication with structured nutrition coaching</span>
+              <div class="rank-facts">
+                <div><strong>Varies by plan</strong>Bundled with WW membership</div>
+                <div><strong>Branded-primary</strong>Medication tier</div>
+                <div><strong>Yes</strong>Prior-auth team</div>
+                <div><strong>Included</strong>WW coaching/points system</div>
+              </div>
+            </div>
+            <div class="rank-cta">
+              <a class="btn small" href="https://www.weightwatchers.com/" target="_blank" rel="noopener noreferrer sponsored" data-provider="WeightWatchers Clinic" data-placement="homepage_top3">Visit WeightWatchers Clinic</a>
+            </div>
+          </article>
+        </div>
+        <p style="text-align:center;"><a href="/weight-loss/"><strong>See all 15 providers &rarr;</strong></a> &middot; <a href="/weight-loss/find-my-match/">Or find my match &rarr;</a></p>
+      </div>
+    </section>
 
     <section id="treatments">
       <div class="wrap">
