@@ -126,6 +126,7 @@ nav.main a.active { color: var(--brand-dark); }
   text-decoration: none;
   font-weight: 700;
   font-size: 0.92rem;
+  white-space: nowrap;
   border: none;
   cursor: pointer;
 }
@@ -234,6 +235,14 @@ section { padding: 56px 0; }
   border: 1.5px solid rgba(255, 255, 255, 0.6);
 }
 .cta-band .btn.ghost:hover { background: rgba(255, 255, 255, 0.12); }
+@media (max-width: 640px) {
+  .cta-band { padding: 36px 20px; }
+  .cta-band .actions { flex-direction: column; align-items: stretch; }
+  .cta-band .btn { width: 100%; box-sizing: border-box; white-space: normal; }
+}
+@media (max-width: 360px) {
+  .cta-band .btn { font-size: 0.85rem; padding: 10px 14px; }
+}
 
 /* Footer */
 footer.site {
@@ -805,6 +814,7 @@ footer.site .wrap { align-items: flex-start; flex-wrap: wrap; gap: 32px 48px; }
 }
 .chat-input-row input {
   flex: 1;
+  min-width: 0;
   border: 1px solid var(--line);
   border-radius: 10px;
   padding: 10px 14px;
@@ -821,6 +831,8 @@ footer.site .wrap { align-items: flex-start; flex-wrap: wrap; gap: 32px 48px; }
   font-weight: 700;
   cursor: pointer;
   font-size: 0.95rem;
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 .chat-input-row button:hover { background: var(--brand-dark); }
 .chat-input-row button:disabled { opacity: 0.5; cursor: not-allowed; }
