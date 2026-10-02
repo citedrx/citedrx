@@ -295,7 +295,7 @@ footer.site nav a:hover { color: var(--brand-dark); }
   border-radius: var(--radius);
   padding: 26px;
   display: grid;
-  grid-template-columns: 44px 1fr 180px;
+  grid-template-columns: 44px 1fr minmax(150px, max-content);
   gap: 20px;
   align-items: start;
 }
