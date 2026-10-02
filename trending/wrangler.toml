@@ -1,0 +1,14 @@
+# Separate Worker for trending.citedrx.com, the paid-traffic lander subdomain.
+# Kept fully apart from the main citedrx.com Worker (repo root wrangler.toml)
+# so ad landers never share pages, assets, or indexing with the organic site.
+# Deploy from this directory: `npx wrangler deploy` (or point a Cloudflare
+# Workers Build at this repo with root directory `trending`).
+name = "citedrx-trending"
+main = "src/index.js"
+compatibility_date = "2026-01-01"
+routes = [{ pattern = "trending.citedrx.com", custom_domain = true }]
+
+[assets]
+directory = "./public"
+binding = "ASSETS"
+not_found_handling = "404-page"

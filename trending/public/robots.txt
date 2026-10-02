@@ -1,0 +1,4 @@
+# Crawlable on purpose: a Disallow here would stop crawlers from ever seeing
+# the noindex header, and ad-review bots need to fetch landers to approve ads.
+User-agent: *
+Allow: /

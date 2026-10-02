@@ -1,0 +1,9 @@
+# Every page on the paid-traffic subdomain stays out of search indexes so it
+# never competes with or dilutes citedrx.com's organic pages.
+/*
+  X-Robots-Tag: noindex, nofollow, noarchive
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+
+/assets/*
+  Cache-Control: public, max-age=3600
