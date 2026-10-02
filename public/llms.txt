@@ -1,0 +1,34 @@
+# CitedRx
+
+> CitedRx is an independent information resource that scores telehealth providers across weight loss, erectile dysfunction, testosterone (TRT), menopause (HRT), mental health, longevity, and gender-affirming care. Every rating is built from clinical trial evidence, independent third-party ratings, and public pricing, not star averages or paid placement, and every claim links back to its primary source.
+
+The CitedRx Score (0-10) weighs five factors: how directly clinical trial evidence applies to what a provider actually prescribes (4 pts), independent third-party rating (2 pts), insurance and prior-authorization support (2 pts), clinical support model such as coaching or monitoring (1 pt), and regulatory standing, including any active FDA warning letters or unresolved litigation (1 pt). Ranking order is never adjusted for referral payment. CitedRx may earn a referral fee when a reader signs up with a provider through a link on the site; this is disclosed on every page that carries a sponsored link and never affects scoring or rank order.
+
+## Treatments
+
+- [Weight Loss (GLP-1)](https://citedrx.com/weight-loss/): All 15 GLP-1 telehealth providers scored and compared, with price, medication tier, and insurance support.
+- [Erectile Dysfunction](https://citedrx.com/erectile-dysfunction/): ED telehealth providers scored on evidence and value.
+- [Testosterone (TRT)](https://citedrx.com/testosterone/): TRT telehealth providers scored on evidence and value.
+- [Menopause (HRT)](https://citedrx.com/menopause/): Menopause hormone therapy telehealth providers scored on evidence and value.
+- [Mental Health](https://citedrx.com/mental-health/): Mental health telehealth providers scored on evidence and value.
+- [Longevity](https://citedrx.com/longevity/): Longevity-focused telehealth and supplement providers scored on evidence and value.
+- [Gender-Affirming Care](https://citedrx.com/gender-affirming-hrt/): Gender-affirming hormone therapy telehealth providers scored on evidence and value.
+- [Find My GLP-1 Match](https://citedrx.com/weight-loss/find-my-match/): AI matcher that recommends a provider from CitedRx's 15 scored weight-loss providers based on budget, insurance, and priorities, grounded strictly in CitedRx's own published data.
+- [Cheapest GLP-1 Telehealth](https://citedrx.com/weight-loss/cheapest-glp1-telehealth/): The 12 GLP-1 providers with a published starting price, sorted cheapest to most expensive, each paired with its real CitedRx Score.
+
+## Research
+
+- [Research Library](https://citedrx.com/research/): Trial data (NEJM, JAMA, Lancet, FDA sources) behind every treatment category, fully cited.
+- [GLP-1 Clinical Trial Evidence](https://citedrx.com/research/weight-loss/): STEP, SURMOUNT, and SELECT trial data behind the weight-loss scoring.
+- [Ro Review](https://citedrx.com/research/weight-loss/articles/ro-review/): Independent review of Ro, not a sponsored partner.
+- [Found GLP-1 Review](https://citedrx.com/research/weight-loss/articles/found-glp1-review/): Independent review of Found, CitedRx's sponsored referral partner, clearly disclosed.
+- [Ro vs. LifeMD](https://citedrx.com/research/weight-loss/articles/ro-vs-lifemd/): Head-to-head comparison of CitedRx's two highest-scored GLP-1 providers.
+- [Found vs. Ro](https://citedrx.com/research/weight-loss/articles/found-vs-ro/): Factor-by-factor comparison, including where the sponsored partner does not come out ahead.
+- [Henry Meds vs. TrimRx](https://citedrx.com/research/weight-loss/articles/henry-meds-vs-trimrx/): Why two similarly priced compounded providers score very differently.
+- [Zepbound vs. Wegovy](https://citedrx.com/research/weight-loss/articles/zepbound-vs-wegovy/): Trial-evidence comparison of the two leading branded GLP-1 medications.
+
+## About
+
+- [About CitedRx](https://citedrx.com/about/): Who CitedRx is and how the scoring methodology works.
+- [Disclaimer](https://citedrx.com/disclaimer/): FTC affiliate disclosure, editorial independence policy, and medical disclaimer.
+- [Articles](https://citedrx.com/articles/): All CitedRx articles across every treatment category.
