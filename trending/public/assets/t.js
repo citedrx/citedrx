@@ -1,11 +1,14 @@
 // Trending Health lander script (all pages, all verticals).
-//  1. Carries ad-click params (utm_*, click_id) from the landing URL onto
-//     every /go/{offer} link, plus the page slug and the link's placement,
-//     so the Worker can pass them to the affiliate network as sub-IDs.
-//  2. Fires a GA4 "clickout" event per outbound click.
-//  3. Shows the sticky CTA bar once the reader is past the first screen.
+//  1. Carries ad-click params (utm_*, the platform click ID) from the landing
+//     URL onto every /go/{offer} link, plus the page slug and the link's
+//     placement, so the Worker can log the click and attribute conversions.
+//  2. Sends a lander-view beacon (/v) for lander click-through reporting.
+//  3. Fires a GA4 "clickout" event per outbound click.
+//  4. Shows the sticky CTA bar once the reader is past the first screen.
 (function () {
-  var PASS = ["utm_source", "utm_campaign", "utm_content", "click_id"];
+  // click_id comes from our per-platform URL templates (src/platforms.js);
+  // fbclid/gclid/ttclid are appended by those platforms automatically.
+  var PASS = ["utm_source", "utm_campaign", "utm_term", "utm_content", "click_id", "fbclid", "gclid", "ttclid"];
   var STORE = "th_click";
 
   // Persist for the session so a reader who moves from the advertorial to
@@ -21,6 +24,13 @@
   if (fresh) { try { sessionStorage.setItem(STORE, JSON.stringify(saved)); } catch (e) {} }
 
   var page = document.body.getAttribute("data-page") || location.pathname;
+
+  try {
+    var view = new URLSearchParams();
+    PASS.forEach(function (k) { if (saved[k]) view.set(k, saved[k]); });
+    view.set("page", page);
+    navigator.sendBeacon("/v", view);
+  } catch (e) {}
 
   document.querySelectorAll('a[href^="/go/"]').forEach(function (a) {
     var u = new URL(a.getAttribute("href"), location.origin);

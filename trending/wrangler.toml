@@ -12,6 +12,15 @@ routes = [{ pattern = "trending.citedrx.com", custom_domain = true }]
 directory = "./public"
 binding = "ASSETS"
 not_found_handling = "404-page"
-# /go/* has no file behind it, so without this, 404-page handling would
-# serve the 404 page and the redirect code in src/index.js would never run.
-run_worker_first = ["/go/*"]
+# These routes have no file behind them, so without this, 404-page handling
+# would serve the 404 page and the code in src/index.js would never run.
+run_worker_first = ["/go/*", "/pb", "/v", "/report"]
+
+# Click / conversion log for the tracking hub (schema: schema.sql).
+[[d1_databases]]
+binding = "DB"
+database_name = "trending-tracking"
+database_id = "ca05895d-d451-4116-a6b2-b8bef46b6913"
+
+# Secret, set in the Cloudflare dashboard (Settings > Variables and secrets),
+# never in this file: TRACKING_KEY guards /pb and /report.
