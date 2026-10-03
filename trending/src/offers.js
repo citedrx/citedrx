@@ -8,12 +8,16 @@
 // link to it from a page as /go/{slug}?pl={placement}. Set `active: false`
 // to pause an offer: its /go link then falls back to `fallback` (another
 // slug) or the trending homepage, so live ads never land on a dead link.
+//
+// `payout` is the network's CPA in USD. It is the conversion value used when
+// a postback arrives without one; keep it in sync with the network.
 
 export default {
   pallas: {
     brand: "Pallas Health",
     vertical: "weight-loss",
     network: "katalys",
+    payout: 175,
     url: "https://track.revoffers.com/aff_c?offer_id=1622&aff_id=13569",
     active: true,
   },
@@ -21,6 +25,7 @@ export default {
     brand: "HealthRx",
     vertical: "weight-loss",
     network: "katalys",
+    payout: 208,
     url: "https://track.revoffers.com/aff_c?offer_id=1630&aff_id=13569&url_id=12442",
     active: true,
   },
@@ -28,6 +33,7 @@ export default {
     brand: "Found",
     vertical: "weight-loss",
     network: "katalys",
+    payout: 260,
     url: "https://track.revoffers.com/aff_c?offer_id=1162&aff_id=13569&url_id=12126",
     active: true,
   },

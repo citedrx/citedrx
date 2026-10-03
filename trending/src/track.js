@@ -13,6 +13,7 @@
 // swallowed and recorded, and /go always redirects.
 
 import platforms from "./platforms.js";
+import offers from "./offers.js";
 
 const MAX = 120;
 const clip = (v) => (v ? String(v).slice(0, MAX) : null);
@@ -95,7 +96,7 @@ const text = (body, status = 200) =>
 // Affiliate-network conversion postback. Expected query params:
 //   key     shared secret (env.TRACKING_KEY)
 //   cid     our click ID, i.e. the network's aff_sub5 macro
-//   payout  commission for this conversion
+//   payout  commission for this conversion (default: the offer's payout)
 //   txn     network transaction ID (dedupes repeated postbacks)
 //   status  optional; rejected/reversed conversions are logged, not reported
 export async function handlePostback(env, params) {
@@ -104,12 +105,14 @@ export async function handlePostback(env, params) {
 
   const cid = clip(params.get("cid"));
   if (!cid) return text("missing cid", 400);
-  const payout = Number.parseFloat(params.get("payout")) || 0;
   const status = clip((params.get("status") || "").toLowerCase());
   const txn = clip(params.get("txn")) || cid;
 
   if (!env.DB) return text("db not configured", 503);
   const click = await env.DB.prepare(`SELECT source, platform_click_id, offer FROM clicks WHERE id = ?`).bind(cid).first();
+  // Fall back to the offer's configured payout if the network didn't send one.
+  const payout =
+    Number.parseFloat(params.get("payout")) || (click && offers[click.offer] && offers[click.offer].payout) || 0;
 
   const inserted = await env.DB.prepare(
     `INSERT OR IGNORE INTO conversions (txn_id, ts, click_id, offer, payout, status) VALUES (?, ?, ?, ?, ?, ?)`
