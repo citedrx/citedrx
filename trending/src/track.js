@@ -19,6 +19,9 @@ const MAX = 120;
 const clip = (v) => (v ? String(v).slice(0, MAX) : null);
 const now = () => Math.floor(Date.now() / 1000);
 const REJECTED = new Set(["rejected", "declined", "reversed", "refunded", "chargeback", "invalid"]);
+const PENDING = new Set(["pending", "hold", "on_hold", "held", "under_review", "review"]);
+// Statuses excluded from report revenue: only approved (or unlabeled) sales count.
+const NOT_EARNED = [...REJECTED, ...PENDING];
 
 // Platform click ID: `click_id` from our URL templates, else the IDs some
 // platforms append on their own.
@@ -98,7 +101,10 @@ const text = (body, status = 200) =>
 //   cid     our click ID, i.e. the network's aff_sub5 macro
 //   payout  commission for this conversion (default: the offer's payout)
 //   txn     network transaction ID (dedupes repeated postbacks)
-//   status  optional; rejected/reversed conversions are logged, not reported
+//   status  optional. Payouts are earned on approval, so a pending
+//           conversion is logged but held back from the ad platform until a
+//           later postback for the same txn approves it; rejected/reversed
+//           ones are logged and never reported.
 export async function handlePostback(env, params) {
   if (!env.TRACKING_KEY) return text("tracking key not configured", 503);
   if (!authorized(env, params)) return text("forbidden", 403);
@@ -114,20 +120,27 @@ export async function handlePostback(env, params) {
   const payout =
     Number.parseFloat(params.get("payout")) || (click && offers[click.offer] && offers[click.offer].payout) || 0;
 
-  const inserted = await env.DB.prepare(
-    `INSERT OR IGNORE INTO conversions (txn_id, ts, click_id, offer, payout, status) VALUES (?, ?, ?, ?, ?, ?)`
-  )
-    .bind(txn, now(), cid, click ? click.offer : null, payout, status)
-    .run();
-  if (!inserted.meta || inserted.meta.changes === 0) return text("duplicate");
+  const existing = await env.DB.prepare(`SELECT forward_status FROM conversions WHERE txn_id = ?`).bind(txn).first();
+  // Already reported to the platform: never report the same sale twice.
+  if (existing && /^sent/.test(existing.forward_status || "")) return text("duplicate");
 
-  let forward = "unknown-click";
-  if (click) {
-    forward = REJECTED.has(status)
-      ? "skipped:" + status
-      : await notifyPlatform(click.source, click.platform_click_id, "conversion", payout || null);
+  let forward;
+  if (!click) forward = "unknown-click";
+  else if (REJECTED.has(status)) forward = "skipped:" + status;
+  else if (PENDING.has(status)) forward = "held:" + status;
+  else forward = await notifyPlatform(click.source, click.platform_click_id, "conversion", payout || null);
+
+  if (existing) {
+    await env.DB.prepare(`UPDATE conversions SET status = ?, payout = ?, forward_status = ? WHERE txn_id = ?`)
+      .bind(status, payout, forward, txn)
+      .run();
+  } else {
+    await env.DB.prepare(
+      `INSERT INTO conversions (txn_id, ts, click_id, offer, payout, status, forward_status) VALUES (?, ?, ?, ?, ?, ?, ?)`
+    )
+      .bind(txn, now(), cid, click ? click.offer : null, payout, status, forward)
+      .run();
   }
-  await env.DB.prepare(`UPDATE conversions SET forward_status = ? WHERE txn_id = ?`).bind(forward, txn).run();
   return text("ok " + forward);
 }
 
@@ -164,10 +177,10 @@ async function breakdown(db, dim, since) {
   const cv = await db
     .prepare(
       `SELECT k.${dim} AS k, COUNT(*) AS n, SUM(v.payout) AS rev FROM conversions v JOIN clicks k ON k.id = v.click_id
-       WHERE v.ts >= ? AND (v.status IS NULL OR v.status NOT IN (${[...REJECTED].map(() => "?").join(",")}))
+       WHERE v.ts >= ? AND (v.status IS NULL OR v.status NOT IN (${NOT_EARNED.map(() => "?").join(",")}))
        GROUP BY k.${dim}`
     )
-    .bind(since, ...REJECTED)
+    .bind(since, ...NOT_EARNED)
     .all();
   cv.results.forEach((r) => {
     const x = row(r.k);

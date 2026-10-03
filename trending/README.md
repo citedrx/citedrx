@@ -49,9 +49,11 @@ but reporting conversions back to them needs their API tokens (not built yet).
 
 Use Katalys's own macro names for aff_sub5 / payout / transaction ID / status.
 `TRACKING_KEY` is a Worker secret (Cloudflare dashboard > citedrx-trending >
-Settings > Variables and secrets). Rejected/reversed conversions are logged
-but not reported to the platform; repeated postbacks for the same `txn` are
-ignored.
+Settings > Variables and secrets). Payouts are earned on approval: a
+`pending` postback is logged but held back from the ad platform until a later
+postback for the same `txn` approves it. Rejected/reversed conversions are
+logged and never reported, a sale is never reported twice, and report revenue
+counts only approved (or unlabeled) conversions.
 
 ### 3. Platform conversion events
 
