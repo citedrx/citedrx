@@ -17,6 +17,20 @@
     gtag('js', new Date());
     gtag('config', 'G-Q2RZ3GMRJX');
   </script>
+  <!-- Taboola Pixel (account 2122137): page views for audiences only.
+       Conversions are reported server-to-server by the Worker (src/platforms.js). -->
+  <script>
+    window._tfa = window._tfa || [];
+    window._tfa.push({notify: 'event', name: 'page_view', id: 2122137});
+    !function (t, f, a, x) {
+      if (!document.getElementById(x)) {
+        t.async = 1; t.src = a; t.id = x; f.parentNode.insertBefore(t, f);
+      }
+    }(document.createElement('script'),
+      document.getElementsByTagName('script')[0],
+      'https://cdn.taboola.com/libtrc/unip/2122137/tfa.js',
+      'tb_tfa_script');
+  </script>
 </head>
 <!-- Chart lander. Rows/columns must match each provider's current published
      offer: re-check pricing before every campaign launch. -->
