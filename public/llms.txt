@@ -17,6 +17,7 @@ The CitedRx Score (0-10) weighs five factors: how directly clinical trial eviden
 - [Cheapest GLP-1 Telehealth](https://citedrx.com/weight-loss/cheapest-glp1-telehealth/): The 12 GLP-1 providers with a published starting price, sorted cheapest to most expensive, each paired with its real CitedRx Score.
 - [Cheapest ED Telehealth](https://citedrx.com/erectile-dysfunction/cheapest-ed-telehealth/): All 9 ED providers with a published price, sorted cheapest to most expensive, each paired with its real CitedRx Score.
 - [Cheapest Menopause / HRT Telehealth](https://citedrx.com/menopause/cheapest-menopause-telehealth/): 7 of CitedRx's 9 menopause providers that publish a single price, sorted cheapest to most expensive.
+- [Cheapest Mental Health Telehealth](https://citedrx.com/mental-health/cheapest-mental-health-telehealth/): 6 of CitedRx's 7 mental health providers that publish a price, sorted cheapest to most expensive.
 
 ## Research
 
@@ -34,6 +35,12 @@ The CitedRx Score (0-10) weighs five factors: how directly clinical trial eviden
 - [Elektra Health Review](https://citedrx.com/research/menopause/articles/elektra-health-review/): Independent review of Elektra Health, tied for CitedRx's top-ranked menopause provider, not a confirmed referral partner.
 - [Elektra Health vs. Gennev](https://citedrx.com/research/menopause/articles/elektra-health-vs-gennev/): Head-to-head comparison of CitedRx's two tied top-scored menopause providers.
 - [Alloy vs. Winona](https://citedrx.com/research/menopause/articles/alloy-vs-winona/): Why the provider with the better customer rating scores lower overall.
+- [QueerMed Review](https://citedrx.com/research/gender-affirming-hrt/articles/queermed-review/): Independent review of QueerMed, CitedRx's top-ranked gender-affirming HRT provider, not a confirmed referral partner.
+- [QueerMed vs. FOLX Health](https://citedrx.com/research/gender-affirming-hrt/articles/queermed-vs-folx-health/): Head-to-head comparison of CitedRx's two highest-scored gender-affirming HRT providers.
+- [FOLX Health vs. Circle Medical](https://citedrx.com/research/gender-affirming-hrt/articles/folx-health-vs-circle-medical/): Trans-specialty practice vs. general telehealth platform offering GAHT as one of many services.
+- [Brightside Health Review](https://citedrx.com/research/mental-health/articles/brightside-review/): Independent review of Brightside Health, CitedRx's top-ranked mental health provider, not a confirmed referral partner.
+- [Brightside Health vs. Rula](https://citedrx.com/research/mental-health/articles/brightside-vs-rula/): Head-to-head comparison of CitedRx's two highest-scored mental health providers.
+- [BetterHelp vs. Talkspace](https://citedrx.com/research/mental-health/articles/betterhelp-vs-talkspace/): The two biggest online therapy brands compared, including BetterHelp's 2023 FTC settlement.
 
 ## About
 
