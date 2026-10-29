@@ -34,6 +34,10 @@ The CitedRx Score (0-10) weighs five factors: how directly clinical trial eviden
 - [Hims vs. Rugiet](https://citedrx.com/research/erectile-dysfunction/articles/hims-vs-rugiet/): Why a compounded 3-in-1 costs far more than FDA-approved generic while scoring far lower.
 - [DirectMax Review](https://citedrx.com/research/erectile-dysfunction/articles/directmax-review/): Independent review of DirectMax (DirectMeds), CitedRx's lowest-scored ED provider, not a confirmed referral partner.
 - [DirectMax vs. Hims](https://citedrx.com/research/erectile-dysfunction/articles/directmax-vs-hims/): Why combining two PDE5 inhibitors against FDA labeling guidance scores far lower than a single FDA-approved drug.
+- [BlueChew Review](https://citedrx.com/research/erectile-dysfunction/articles/bluechew-review/): Independent review of BlueChew, covering its compounded chewable formulation and a 2025 FDA warning letter over its marketing claims.
+- [BlueChew vs. Hims](https://citedrx.com/research/erectile-dysfunction/articles/hims-vs-bluechew/): Chewable, compounded combination vs. a plain FDA-approved tablet, compared factor by factor.
+- [Found vs. Noom Med](https://citedrx.com/research/weight-loss/articles/found-vs-noom-med/): Two coaching-led GLP-1 providers compared on evidence match, price, and insurance support.
+- [Ro vs. Mochi Health](https://citedrx.com/research/weight-loss/articles/ro-vs-mochi-health/): Why Mochi Health's lower price doesn't close its evidence-match gap with Ro.
 - [Elektra Health Review](https://citedrx.com/research/menopause/articles/elektra-health-review/): Independent review of Elektra Health, tied for CitedRx's top-ranked menopause provider, not a confirmed referral partner.
 - [Elektra Health vs. Gennev](https://citedrx.com/research/menopause/articles/elektra-health-vs-gennev/): Head-to-head comparison of CitedRx's two tied top-scored menopause providers.
 - [Alloy vs. Winona](https://citedrx.com/research/menopause/articles/alloy-vs-winona/): Why the provider with the better customer rating scores lower overall.
