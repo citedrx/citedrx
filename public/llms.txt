@@ -15,7 +15,7 @@ The CitedRx Score (0-10) weighs five factors: how directly clinical trial eviden
 - [Gender-Affirming Care](https://citedrx.com/gender-affirming-hrt/): Gender-affirming hormone therapy telehealth providers scored on evidence and value.
 - [Find My GLP-1 Match](https://citedrx.com/weight-loss/find-my-match/): AI matcher that recommends a provider from CitedRx's 15 scored weight-loss providers based on budget, insurance, and priorities, grounded strictly in CitedRx's own published data.
 - [Cheapest GLP-1 Telehealth](https://citedrx.com/weight-loss/cheapest-glp1-telehealth/): The 12 GLP-1 providers with a published starting price, sorted cheapest to most expensive, each paired with its real CitedRx Score.
-- [Cheapest ED Telehealth](https://citedrx.com/erectile-dysfunction/cheapest-ed-telehealth/): All 9 ED providers with a published price, sorted cheapest to most expensive, each paired with its real CitedRx Score.
+- [Cheapest ED Telehealth](https://citedrx.com/erectile-dysfunction/cheapest-ed-telehealth/): ED providers with a published price, sorted cheapest to most expensive, each paired with its real CitedRx Score.
 - [Cheapest Menopause / HRT Telehealth](https://citedrx.com/menopause/cheapest-menopause-telehealth/): 7 of CitedRx's 9 menopause providers that publish a single price, sorted cheapest to most expensive.
 - [Cheapest Mental Health Telehealth](https://citedrx.com/mental-health/cheapest-mental-health-telehealth/): 6 of CitedRx's 7 mental health providers that publish a price, sorted cheapest to most expensive.
 
@@ -32,6 +32,8 @@ The CitedRx Score (0-10) weighs five factors: how directly clinical trial eviden
 - [Hims Review](https://citedrx.com/research/erectile-dysfunction/articles/hims-review/): Independent review of Hims, CitedRx's top-ranked ED provider, not a confirmed referral partner.
 - [Hims vs. GoodRx Care](https://citedrx.com/research/erectile-dysfunction/articles/hims-vs-goodrx-care/): Head-to-head comparison of CitedRx's two highest-scored ED providers.
 - [Hims vs. Rugiet](https://citedrx.com/research/erectile-dysfunction/articles/hims-vs-rugiet/): Why a compounded 3-in-1 costs far more than FDA-approved generic while scoring far lower.
+- [DirectMax Review](https://citedrx.com/research/erectile-dysfunction/articles/directmax-review/): Independent review of DirectMax (DirectMeds), CitedRx's lowest-scored ED provider, not a confirmed referral partner.
+- [DirectMax vs. Hims](https://citedrx.com/research/erectile-dysfunction/articles/directmax-vs-hims/): Why combining two PDE5 inhibitors against FDA labeling guidance scores far lower than a single FDA-approved drug.
 - [Elektra Health Review](https://citedrx.com/research/menopause/articles/elektra-health-review/): Independent review of Elektra Health, tied for CitedRx's top-ranked menopause provider, not a confirmed referral partner.
 - [Elektra Health vs. Gennev](https://citedrx.com/research/menopause/articles/elektra-health-vs-gennev/): Head-to-head comparison of CitedRx's two tied top-scored menopause providers.
 - [Alloy vs. Winona](https://citedrx.com/research/menopause/articles/alloy-vs-winona/): Why the provider with the better customer rating scores lower overall.
