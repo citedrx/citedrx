@@ -6,16 +6,17 @@ The CitedRx Score (0-10) weighs five factors: how directly clinical trial eviden
 
 ## Treatments
 
-- [Weight Loss (GLP-1)](https://citedrx.com/weight-loss/): All 15 GLP-1 telehealth providers scored and compared, with price, medication tier, and insurance support.
+- [Weight Loss (GLP-1)](https://citedrx.com/weight-loss/): All 20 GLP-1 telehealth providers scored and compared, with price, medication tier, and insurance support.
 - [Erectile Dysfunction](https://citedrx.com/erectile-dysfunction/): ED telehealth providers scored on evidence and value.
 - [Testosterone (TRT)](https://citedrx.com/testosterone/): TRT telehealth providers scored on evidence and value.
 - [Menopause (HRT)](https://citedrx.com/menopause/): Menopause hormone therapy telehealth providers scored on evidence and value.
 - [Mental Health](https://citedrx.com/mental-health/): Mental health telehealth providers scored on evidence and value.
 - [Longevity](https://citedrx.com/longevity/): Longevity-focused telehealth and supplement providers scored on evidence and value.
 - [Gender-Affirming Care](https://citedrx.com/gender-affirming-hrt/): Gender-affirming hormone therapy telehealth providers scored on evidence and value.
-- [Find My GLP-1 Match](https://citedrx.com/weight-loss/find-my-match/): AI matcher that recommends a provider from CitedRx's 15 scored weight-loss providers based on budget, insurance, and priorities, grounded strictly in CitedRx's own published data.
-- [Cheapest GLP-1 Telehealth](https://citedrx.com/weight-loss/cheapest-glp1-telehealth/): The 12 GLP-1 providers with a published starting price, sorted cheapest to most expensive, each paired with its real CitedRx Score.
+- [Find My GLP-1 Match](https://citedrx.com/weight-loss/find-my-match/): AI matcher that recommends a provider from CitedRx's 20 scored weight-loss providers based on budget, insurance, and priorities, grounded strictly in CitedRx's own published data.
+- [Cheapest GLP-1 Telehealth](https://citedrx.com/weight-loss/cheapest-glp1-telehealth/): The 17 GLP-1 providers with a published starting price, sorted cheapest to most expensive, each paired with its real CitedRx Score.
 - [Cheapest ED Telehealth](https://citedrx.com/erectile-dysfunction/cheapest-ed-telehealth/): ED providers with a published price, sorted cheapest to most expensive, each paired with its real CitedRx Score.
+- [Cheapest TRT Telehealth](https://citedrx.com/testosterone/cheapest-trt-telehealth/): All 9 TRT providers with a published price, sorted cheapest to most expensive, each paired with its real CitedRx Score.
 - [Cheapest Menopause / HRT Telehealth](https://citedrx.com/menopause/cheapest-menopause-telehealth/): 7 of CitedRx's 9 menopause providers that publish a single price, sorted cheapest to most expensive.
 - [Cheapest Mental Health Telehealth](https://citedrx.com/mental-health/cheapest-mental-health-telehealth/): 6 of CitedRx's 7 mental health providers that publish a price, sorted cheapest to most expensive.
 
@@ -44,6 +45,10 @@ The CitedRx Score (0-10) weighs five factors: how directly clinical trial eviden
 - [QueerMed Review](https://citedrx.com/research/gender-affirming-hrt/articles/queermed-review/): Independent review of QueerMed, CitedRx's top-ranked gender-affirming HRT provider, not a confirmed referral partner.
 - [QueerMed vs. FOLX Health](https://citedrx.com/research/gender-affirming-hrt/articles/queermed-vs-folx-health/): Head-to-head comparison of CitedRx's two highest-scored gender-affirming HRT providers.
 - [FOLX Health vs. Circle Medical](https://citedrx.com/research/gender-affirming-hrt/articles/folx-health-vs-circle-medical/): Trans-specialty practice vs. general telehealth platform offering GAHT as one of many services.
+- [QueerMed vs. QueerDoc](https://citedrx.com/research/gender-affirming-hrt/articles/queermed-vs-queerdoc/): Why QueerDoc, licensed in roughly 10 states, is a legitimate alternative to nationwide QueerMed where it's available.
+- [Hone Health Review](https://citedrx.com/research/testosterone/articles/hone-health-review/): Independent review of Hone Health, tied for CitedRx's top TRT score, not a confirmed referral partner.
+- [Hone Health vs. Peter MD](https://citedrx.com/research/testosterone/articles/hone-health-vs-peter-md/): CitedRx's tied top-scored TRT providers compared on price and lab-testing format.
+- [Maximus Tribe vs. TRT Nation](https://citedrx.com/research/testosterone/articles/maximus-tribe-vs-trt-nation/): Nearly identical price, a full point apart in score: why independent rating matters.
 - [Brightside Health Review](https://citedrx.com/research/mental-health/articles/brightside-review/): Independent review of Brightside Health, CitedRx's top-ranked mental health provider, not a confirmed referral partner.
 - [Brightside Health vs. Rula](https://citedrx.com/research/mental-health/articles/brightside-vs-rula/): Head-to-head comparison of CitedRx's two highest-scored mental health providers.
 - [BetterHelp vs. Talkspace](https://citedrx.com/research/mental-health/articles/betterhelp-vs-talkspace/): The two biggest online therapy brands compared, including BetterHelp's 2023 FTC settlement.
