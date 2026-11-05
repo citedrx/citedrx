@@ -6,7 +6,7 @@ The CitedRx Score (0-10) weighs five factors: how directly clinical trial eviden
 
 ## Treatments
 
-- [Weight Loss (GLP-1)](https://citedrx.com/weight-loss/): All 20 GLP-1 telehealth providers scored and compared, with price, medication tier, and insurance support.
+- [Weight Loss (GLP-1)](https://citedrx.com/weight-loss/): All 21 GLP-1 telehealth providers scored and compared, with price, medication tier, and insurance support.
 - [Erectile Dysfunction](https://citedrx.com/erectile-dysfunction/): ED telehealth providers scored on evidence and value.
 - [Testosterone (TRT)](https://citedrx.com/testosterone/): TRT telehealth providers scored on evidence and value.
 - [Menopause (HRT)](https://citedrx.com/menopause/): Menopause hormone therapy telehealth providers scored on evidence and value.
@@ -39,6 +39,8 @@ The CitedRx Score (0-10) weighs five factors: how directly clinical trial eviden
 - [BlueChew vs. Hims](https://citedrx.com/research/erectile-dysfunction/articles/hims-vs-bluechew/): Chewable, compounded combination vs. a plain FDA-approved tablet, compared factor by factor.
 - [Found vs. Noom Med](https://citedrx.com/research/weight-loss/articles/found-vs-noom-med/): Two coaching-led GLP-1 providers compared on evidence match, price, and insurance support.
 - [Ro vs. Mochi Health](https://citedrx.com/research/weight-loss/articles/ro-vs-mochi-health/): Why Mochi Health's lower price doesn't close its evidence-match gap with Ro.
+- [Oak Weight Loss Review](https://citedrx.com/research/weight-loss/articles/oak-review/): Independent review of Oak Weight Loss, CitedRx's newest sponsored referral partner, including a documented pricing inconsistency on its own site.
+- [Oak vs. Ro](https://citedrx.com/research/weight-loss/articles/oak-vs-ro/): An honest look at what Oak's compounded, lower-cost model trades away against Ro's branded-primary evidence match.
 - [Elektra Health Review](https://citedrx.com/research/menopause/articles/elektra-health-review/): Independent review of Elektra Health, tied for CitedRx's top-ranked menopause provider, not a confirmed referral partner.
 - [Elektra Health vs. Gennev](https://citedrx.com/research/menopause/articles/elektra-health-vs-gennev/): Head-to-head comparison of CitedRx's two tied top-scored menopause providers.
 - [Alloy vs. Winona](https://citedrx.com/research/menopause/articles/alloy-vs-winona/): Why the provider with the better customer rating scores lower overall.
