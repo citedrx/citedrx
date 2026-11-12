@@ -30,7 +30,7 @@ The CitedRx Score (0-10) weighs five factors: how directly clinical trial eviden
 - [Found vs. Ro](https://citedrx.com/research/weight-loss/articles/found-vs-ro/): Factor-by-factor comparison, including where the sponsored partner does not come out ahead.
 - [Henry Meds vs. TrimRx](https://citedrx.com/research/weight-loss/articles/henry-meds-vs-trimrx/): Why two similarly priced compounded providers score very differently.
 - [Zepbound vs. Wegovy](https://citedrx.com/research/weight-loss/articles/zepbound-vs-wegovy/): Trial-evidence comparison of the two leading branded GLP-1 medications.
-- [Hims Review](https://citedrx.com/research/erectile-dysfunction/articles/hims-review/): Independent review of Hims, CitedRx's top-ranked ED provider, not a confirmed referral partner.
+- [Hims Review](https://citedrx.com/research/erectile-dysfunction/articles/hims-review/): Independent review of Hims, CitedRx's top-ranked ED provider, not a confirmed referral partner. Covers a July 2026 FTC/Utah lawsuit over subscription cancellation and data practices, disputed by the company, reflected in its score.
 - [Hims vs. GoodRx Care](https://citedrx.com/research/erectile-dysfunction/articles/hims-vs-goodrx-care/): Head-to-head comparison of CitedRx's two highest-scored ED providers.
 - [Hims vs. Rugiet](https://citedrx.com/research/erectile-dysfunction/articles/hims-vs-rugiet/): Why a compounded 3-in-1 costs far more than FDA-approved generic while scoring far lower.
 - [DirectMax Review](https://citedrx.com/research/erectile-dysfunction/articles/directmax-review/): Independent review of DirectMax (DirectMeds), CitedRx's lowest-scored ED provider, not a confirmed referral partner.
