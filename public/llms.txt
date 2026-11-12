@@ -54,6 +54,7 @@ The CitedRx Score (0-10) weighs five factors: how directly clinical trial eviden
 - [Brightside Health Review](https://citedrx.com/research/mental-health/articles/brightside-review/): Independent review of Brightside Health, CitedRx's top-ranked mental health provider, not a confirmed referral partner.
 - [Brightside Health vs. Rula](https://citedrx.com/research/mental-health/articles/brightside-vs-rula/): Head-to-head comparison of CitedRx's two highest-scored mental health providers.
 - [BetterHelp vs. Talkspace](https://citedrx.com/research/mental-health/articles/betterhelp-vs-talkspace/): The two biggest online therapy brands compared, including BetterHelp's 2023 FTC settlement.
+- [Talkiatry vs. Klarity](https://citedrx.com/research/mental-health/articles/talkiatry-vs-klarity/): Why CitedRx scores Talkiatry (6.6/10) but excludes Klarity Health entirely over its ADHD stimulant-prescribing model and complaint history.
 
 ## About
 
