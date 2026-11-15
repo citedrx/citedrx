@@ -25,8 +25,9 @@ The CitedRx Score (0-10) weighs five factors: how directly clinical trial eviden
 - [Research Library](https://citedrx.com/research/): Trial data (NEJM, JAMA, Lancet, FDA sources) behind every treatment category, fully cited.
 - [GLP-1 Clinical Trial Evidence](https://citedrx.com/research/weight-loss/): STEP, SURMOUNT, and SELECT trial data behind the weight-loss scoring.
 - [Ro Review](https://citedrx.com/research/weight-loss/articles/ro-review/): Independent review of Ro, not a sponsored partner.
-- [Found GLP-1 Review](https://citedrx.com/research/weight-loss/articles/found-glp1-review/): Independent review of Found, CitedRx's sponsored referral partner, clearly disclosed.
+- [Found GLP-1 Review](https://citedrx.com/research/weight-loss/articles/found-glp1-review/): Independent review of Found, CitedRx's sponsored referral partner, clearly disclosed, including a real Trustpilot-sourced customer-review breakdown.
 - [Ro vs. LifeMD](https://citedrx.com/research/weight-loss/articles/ro-vs-lifemd/): Head-to-head comparison of CitedRx's two highest-scored GLP-1 providers.
+- [Ro Review](https://citedrx.com/research/weight-loss/articles/ro-review/): Independent review of Ro, CitedRx's top-ranked GLP-1 provider, including a real Trustpilot-sourced customer-review breakdown.
 - [Found vs. Ro](https://citedrx.com/research/weight-loss/articles/found-vs-ro/): Factor-by-factor comparison, including where the sponsored partner does not come out ahead.
 - [Henry Meds vs. TrimRx](https://citedrx.com/research/weight-loss/articles/henry-meds-vs-trimrx/): Why two similarly priced compounded providers score very differently.
 - [Zepbound vs. Wegovy](https://citedrx.com/research/weight-loss/articles/zepbound-vs-wegovy/): Trial-evidence comparison of the two leading branded GLP-1 medications.
