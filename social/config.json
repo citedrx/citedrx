@@ -1,0 +1,5 @@
+{
+  "_comment": "Non-secret IDs only. The Page Access Token itself is never stored in this repo — it's injected by the environment's network proxy for requests to graph.facebook.com.",
+  "page_id": "",
+  "instagram_business_account_id": ""
+}
