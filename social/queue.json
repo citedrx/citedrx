@@ -90,7 +90,11 @@
       "hashtags_ig": "#GLP1 #Tirzepatide #EliLilly #WeightLossTelehealth #TelehealthFacts #CitedRx",
       "source_url": "https://citedrx.com/weight-loss/",
       "image_status": "deployed",
-      "post_status": "ready"
+      "post_status": "posted",
+      "fb_post_id": "1329691640234984_122126306445489075",
+      "ig_media_id": "18037472777903267",
+      "posted_at": "2026-11-22T12:38:20Z",
+      "_note": "Posted twice (2026-11-21 and 2026-11-22) due to a scheduled-task bug that never pushed queue.json back to the repo; IDs here are the second (2026-11-22) post. See git history around 2026-11-23 for the fix and root-cause note."
     },
     {
       "id": "2026-11-22-trust-talkspace-betterhelp-accountability",
