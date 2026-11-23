@@ -161,7 +161,11 @@
 
   <div class="match-ticker" id="match-ticker">
     <div class="wrap">
-      <span>Not sure which GLP-1 provider fits you? <a class="ticker-link" href="/weight-loss/find-my-match/" data-provider="FindMyMatch" data-placement="ticker">Get your free AI match &rarr;</a></span>
+      <div class="ticker-track" aria-hidden="true">
+        <span class="ticker-item">Not sure which GLP-1 provider fits you? <a class="ticker-link" href="/weight-loss/find-my-match/" tabindex="-1">Get your free AI match &rarr;</a></span>
+        <span class="ticker-item">Not sure which GLP-1 provider fits you? <a class="ticker-link" href="/weight-loss/find-my-match/" tabindex="-1">Get your free AI match &rarr;</a></span>
+      </div>
+      <a class="ticker-fallback-link" href="/weight-loss/find-my-match/" data-provider="FindMyMatch" data-placement="ticker">Not sure which GLP-1 provider fits you? Get your free AI match</a>
       <button class="ticker-close" aria-label="Dismiss this message" onclick="var t=document.getElementById(&#39;match-ticker&#39;); t.setAttribute(&#39;hidden&#39;,&#39;&#39;); try{sessionStorage.setItem(&#39;ctrx_ticker_dismissed&#39;,&#39;1&#39;)}catch(e){}">&times;</button>
     </div>
   </div>
