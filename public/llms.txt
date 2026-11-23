@@ -17,7 +17,7 @@ The CitedRx Score (0-10) weighs five factors: how directly clinical trial eviden
 - [Cheapest GLP-1 Telehealth](https://citedrx.com/weight-loss/cheapest-glp1-telehealth/): The 17 GLP-1 providers with a published starting price, sorted cheapest to most expensive, each paired with its real CitedRx Score.
 - [Cheapest ED Telehealth](https://citedrx.com/erectile-dysfunction/cheapest-ed-telehealth/): ED providers with a published price, sorted cheapest to most expensive, each paired with its real CitedRx Score.
 - [Cheapest TRT Telehealth](https://citedrx.com/testosterone/cheapest-trt-telehealth/): All 9 TRT providers with a published price, sorted cheapest to most expensive, each paired with its real CitedRx Score.
-- [Cheapest Menopause / HRT Telehealth](https://citedrx.com/menopause/cheapest-menopause-telehealth/): 7 of CitedRx's 9 menopause providers that publish a single price, sorted cheapest to most expensive.
+- [Cheapest Menopause / HRT Telehealth](https://citedrx.com/menopause/cheapest-menopause-telehealth/): 7 of CitedRx's 10 menopause providers that publish a single price, sorted cheapest to most expensive.
 - [Cheapest Mental Health Telehealth](https://citedrx.com/mental-health/cheapest-mental-health-telehealth/): 6 of CitedRx's 7 mental health providers that publish a price, sorted cheapest to most expensive.
 
 ## Research
@@ -36,6 +36,7 @@ The CitedRx Score (0-10) weighs five factors: how directly clinical trial eviden
 - [Hims vs. Rugiet](https://citedrx.com/research/erectile-dysfunction/articles/hims-vs-rugiet/): Why a compounded 3-in-1 costs far more than FDA-approved generic while scoring far lower.
 - [DirectMax Review](https://citedrx.com/research/erectile-dysfunction/articles/directmax-review/): Independent review of DirectMax (DirectMeds), CitedRx's lowest-scored ED provider, not a confirmed referral partner.
 - [DirectMax vs. Hims](https://citedrx.com/research/erectile-dysfunction/articles/directmax-vs-hims/): Why combining two PDE5 inhibitors against FDA labeling guidance scores far lower than a single FDA-approved drug.
+- [OakMax Review](https://citedrx.com/research/erectile-dysfunction/articles/oakmax-review/): Independent review of OakMax, from Oak Longevity, not a confirmed referral partner. The same sildenafil-tadalafil combination issue as DirectMax.
 - [BlueChew Review](https://citedrx.com/research/erectile-dysfunction/articles/bluechew-review/): Independent review of BlueChew, covering its compounded chewable formulation and a 2025 FDA warning letter over its marketing claims.
 - [BlueChew vs. Hims](https://citedrx.com/research/erectile-dysfunction/articles/hims-vs-bluechew/): Chewable, compounded combination vs. a plain FDA-approved tablet, compared factor by factor.
 - [Found vs. Noom Med](https://citedrx.com/research/weight-loss/articles/found-vs-noom-med/): Two coaching-led GLP-1 providers compared on evidence match, price, and insurance support.
@@ -45,6 +46,7 @@ The CitedRx Score (0-10) weighs five factors: how directly clinical trial eviden
 - [Elektra Health Review](https://citedrx.com/research/menopause/articles/elektra-health-review/): Independent review of Elektra Health, tied for CitedRx's top-ranked menopause provider, not a confirmed referral partner.
 - [Elektra Health vs. Gennev](https://citedrx.com/research/menopause/articles/elektra-health-vs-gennev/): Head-to-head comparison of CitedRx's two tied top-scored menopause providers.
 - [Alloy vs. Winona](https://citedrx.com/research/menopause/articles/alloy-vs-winona/): Why the provider with the better customer rating scores lower overall.
+- [Fem Excel Review](https://citedrx.com/research/menopause/articles/fem-excel-review/): Independent review of Fem Excel, not a confirmed referral partner. CitedRx's lowest menopause score, with a real Trustpilot-sourced customer-review breakdown.
 - [QueerMed Review](https://citedrx.com/research/gender-affirming-hrt/articles/queermed-review/): Independent review of QueerMed, CitedRx's top-ranked gender-affirming HRT provider, not a confirmed referral partner.
 - [QueerMed vs. FOLX Health](https://citedrx.com/research/gender-affirming-hrt/articles/queermed-vs-folx-health/): Head-to-head comparison of CitedRx's two highest-scored gender-affirming HRT providers.
 - [FOLX Health vs. Circle Medical](https://citedrx.com/research/gender-affirming-hrt/articles/folx-health-vs-circle-medical/): Trans-specialty practice vs. general telehealth platform offering GAHT as one of many services.
