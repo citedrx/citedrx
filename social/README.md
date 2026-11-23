@@ -24,6 +24,7 @@ Append an entry to `queue.json` with a unique `id` (date-prefixed), pick a `pill
 - `safety_psa` — surfaces a real, sourced regulatory/legal disclosure (FDA warning letter, FTC lawsuit, etc.)
 - `explainer` — plain-language answer to a real search query pattern
 - `comparison_teaser` — teases a head-to-head comparison already on the site
+- `news_reaction` — connects a real, independently-verifiable news event to CitedRx's own already-published, sourced data on the topic (never the other way around: the CitedRx-specific claims must trace to source_url, not to the news item itself)
 
 ## Credentials
 

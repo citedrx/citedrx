@@ -23,6 +23,7 @@ Usage:
 import argparse
 import json
 import sys
+import time
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -55,14 +56,27 @@ def save_json(path, data):
         f.write("\n")
 
 
-def graph_request(path, params, method="POST"):
+def graph_request(path, params, method="POST", access_token=None):
+    """Call the Graph API.
+
+    With no access_token, sends the placeholder Bearer header the proxy
+    replaces with the System User token (used only to look up the Page's
+    own access token). Publishing calls must instead pass the Page access
+    token explicitly as a query/body parameter: Facebook requires posts to
+    be made "as the page", which the System User token alone can't do, and
+    passing it via the Authorization header would just get overwritten
+    again by the proxy's injected System User credential.
+    """
     url = f"{GRAPH_BASE}/{path}"
-    data = urllib.parse.urlencode(params).encode()
-    req = urllib.request.Request(url, data=data if method == "POST" else None, method=method)
-    req.add_header("Authorization", f"Bearer {PLACEHOLDER_TOKEN}")
-    if method != "POST":
-        url_with_qs = f"{url}?{urllib.parse.urlencode(params)}"
-        req = urllib.request.Request(url_with_qs, method=method)
+    if access_token:
+        params = {**params, "access_token": access_token}
+    if method == "POST":
+        data = urllib.parse.urlencode(params).encode()
+        req = urllib.request.Request(url, data=data, method=method)
+    else:
+        url = f"{url}?{urllib.parse.urlencode(params)}"
+        req = urllib.request.Request(url, method=method)
+    if not access_token:
         req.add_header("Authorization", f"Bearer {PLACEHOLDER_TOKEN}")
     try:
         with urllib.request.urlopen(req, timeout=30) as resp:
@@ -71,6 +85,33 @@ def graph_request(path, params, method="POST"):
         body = e.read().decode()
         print(f"Graph API error on {path}: {e.code} {body}", file=sys.stderr)
         raise
+
+
+def get_page_access_token(page_id):
+    result = graph_request(f"{page_id}", {"fields": "access_token"}, method="GET")
+    return result["access_token"]
+
+
+def wait_for_container_ready(creation_id, access_token, timeout=60, interval=3):
+    """Poll an Instagram media container until Meta finishes processing it.
+
+    media_publish can 400 with "Media ID is not available" if called before
+    Meta finishes fetching/transcoding the image; status_code moves from
+    IN_PROGRESS to FINISHED (or ERROR) with no documented fixed delay.
+    """
+    waited = 0
+    while waited <= timeout:
+        status = graph_request(
+            f"{creation_id}", {"fields": "status_code"}, method="GET", access_token=access_token
+        )
+        code = status.get("status_code")
+        if code == "FINISHED":
+            return
+        if code == "ERROR":
+            raise RuntimeError(f"Instagram container {creation_id} failed processing: {status}")
+        time.sleep(interval)
+        waited += interval
+    raise TimeoutError(f"Instagram container {creation_id} not ready after {timeout}s")
 
 
 def pick_post(queue, forced_id=None):
@@ -129,27 +170,40 @@ def main():
         )
         sys.exit(1)
 
-    fb_result = graph_request(
-        f"{page_id}/photos",
-        {"url": image_url, "caption": caption_fb, "published": "true"},
-    )
-    fb_post_id = fb_result.get("post_id") or fb_result.get("id")
-    print(f"Facebook post published: {fb_post_id}")
+    page_token = get_page_access_token(page_id)
+
+    fb_post_id = post.get("fb_post_id")
+    if fb_post_id:
+        print(f"Facebook already posted (from a previous run): {fb_post_id}")
+    else:
+        fb_result = graph_request(
+            f"{page_id}/photos",
+            {"url": image_url, "caption": caption_fb, "published": "true"},
+            access_token=page_token,
+        )
+        fb_post_id = fb_result.get("post_id") or fb_result.get("id")
+        print(f"Facebook post published: {fb_post_id}")
+        # Persist immediately: if Instagram fails below, a retry must not
+        # re-post to Facebook.
+        post["fb_post_id"] = fb_post_id
+        save_json(QUEUE_PATH, queue)
 
     container = graph_request(
         f"{ig_user_id}/media",
         {"image_url": image_url, "caption": caption_ig},
+        access_token=page_token,
     )
     creation_id = container["id"]
+    wait_for_container_ready(creation_id, page_token)
     publish_result = graph_request(
         f"{ig_user_id}/media_publish",
         {"creation_id": creation_id},
+        access_token=page_token,
     )
     ig_media_id = publish_result["id"]
     print(f"Instagram post published: {ig_media_id}")
 
     post["post_status"] = "posted"
-    post["fb_post_id"] = fb_post_id
     post["ig_media_id"] = ig_media_id
     post["posted_at"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     save_json(QUEUE_PATH, queue)

@@ -1,6 +1,9 @@
 {
   "_comment": "CitedRx social content queue. Each entry is one static post, cross-posted to Facebook and Instagram by social/post.py. Add new entries at the end; the posting script always takes the oldest entry with post_status 'ready'. Never invent facts here: every claim must trace back to a real, already-published CitedRx page (see source_url).",
-  "platforms": ["facebook", "instagram"],
+  "platforms": [
+    "facebook",
+    "instagram"
+  ],
   "posts": [
     {
       "id": "2026-11-24-mythbust-compounded-semaglutide",
@@ -11,8 +14,11 @@
       "caption_base": "A lot of lower-cost GLP-1 telehealth plans use compounded semaglutide — made by a compounding pharmacy, not the original manufacturer. It's not the same FDA-approved product tested in the STEP and SURMOUNT trials, and the FDA has published specific concerns about unapproved GLP-1 drugs sold for weight loss. That doesn't automatically make it unsafe — but it does mean the clinical trial evidence doesn't transfer over automatically. Know which one you're actually being prescribed before you start.\n\nWe break down which of the 21 GLP-1 telehealth providers we track are branded, mixed, or compounded-primary — link in bio.",
       "hashtags_ig": "#GLP1 #WeightLossTelehealth #Semaglutide #Wegovy #Ozempic #TelehealthFacts #CitedRx",
       "source_url": "https://citedrx.com/research/weight-loss/",
-      "image_status": "pending",
-      "post_status": "draft"
+      "image_status": "deployed",
+      "post_status": "posted",
+      "fb_post_id": "1329691640234984_122125918719489075",
+      "ig_media_id": "18445014811177559",
+      "posted_at": "2026-11-20T19:19:15Z"
     },
     {
       "id": "2026-11-27-trust-sponsorship-never-changes-rank",
@@ -23,8 +29,8 @@
       "caption_base": "Found is one of our sponsored referral partners — we may earn a fee if you sign up through our link. It still scores 8.3/10 and ranks 4th of 21 GLP-1 providers, below Ro (9.3/10), which pays us nothing.\n\nThat's on purpose. Every CitedRx Score is built from the same five factors — evidence match, independent rating, insurance support, clinical support model, and regulatory standing — regardless of who's paying for the placement.\n\nFull methodology in our bio link.",
       "hashtags_ig": "#TelehealthTransparency #HonestReviews #CitedRx #GLP1 #WeightLoss",
       "source_url": "https://citedrx.com/weight-loss/",
-      "image_status": "pending",
-      "post_status": "draft"
+      "image_status": "deployed",
+      "post_status": "ready"
     },
     {
       "id": "2026-12-01-spotlight-ro",
@@ -35,8 +41,8 @@
       "caption_base": "Ro prescribes predominantly FDA-approved branded GLP-1s — Wegovy, Zepbound, and Ozempic — the exact medications tested in the STEP and SURMOUNT trials. Add a dedicated prior-authorization team for insured members and a 4.4/5 U.S. News rating, and it's our top evidence-match score in the category.\n\nRo isn't a CitedRx referral partner — this review wasn't paid for or reviewed by Ro. Full review in bio.",
       "hashtags_ig": "#Ro #GLP1 #Wegovy #Zepbound #WeightLossTelehealth #CitedRx",
       "source_url": "https://citedrx.com/research/weight-loss/articles/ro-review/",
-      "image_status": "pending",
-      "post_status": "draft"
+      "image_status": "deployed",
+      "post_status": "ready"
     },
     {
       "id": "2026-12-04-psa-hims-ftc-lawsuit",
@@ -47,8 +53,8 @@
       "caption_base": "Before you sign up for an ED or weight-loss telehealth subscription, here's something worth knowing: in July 2026, the FTC and the Utah Attorney General sued Hims & Hers Health, alleging a deceptive multi-step cancellation process and improper sharing of health data with advertisers. Hims disputes the claims, and the case is unresolved.\n\nWe still rank Hims #1 in erectile dysfunction (8.8/10, down from 9.1 before this came to light) — but we think you should know what you're signing up for before you do. Full breakdown in bio.",
       "hashtags_ig": "#ConsumerProtection #Hims #TelehealthFacts #FTC #KnowBeforeYouSign #CitedRx",
       "source_url": "https://citedrx.com/research/erectile-dysfunction/articles/hims-review/",
-      "image_status": "pending",
-      "post_status": "draft"
+      "image_status": "deployed",
+      "post_status": "ready"
     },
     {
       "id": "2026-12-08-explainer-hrt-telehealth",
@@ -59,8 +65,8 @@
       "caption_base": "Estrogen and progesterone aren't controlled substances, so licensed clinicians can evaluate and prescribe menopause hormone therapy remotely almost anywhere in the U.S. — no in-person visit required.\n\nWe've scored 9 menopause/HRT telehealth providers on evidence match, independent ratings, insurance support, and more. If you've been putting off looking into HRT because you assumed it meant a string of in-person visits, it might be easier than you think. Link in bio.",
       "hashtags_ig": "#Menopause #HRT #HormoneTherapy #MenopauseTelehealth #WomensHealth #CitedRx",
       "source_url": "https://citedrx.com/menopause/",
-      "image_status": "pending",
-      "post_status": "draft"
+      "image_status": "deployed",
+      "post_status": "ready"
     },
     {
       "id": "2026-12-11-comparison-queermed-queerdoc",
@@ -71,8 +77,96 @@
       "caption_base": "Both are real trans-specialty telehealth practices using an informed-consent model for gender-affirming hormone therapy. The biggest practical difference: QueerMed serves patients nationwide; QueerDoc is licensed in roughly 10 states.\n\nIf QueerDoc serves your state, it's a legitimate option with a broader scope (puberty blockers, legal transition consults, surgery referrals). If it doesn't, QueerMed is the closest like-for-like alternative. Full factor-by-factor comparison in bio.",
       "hashtags_ig": "#GenderAffirmingCare #TransHealthcare #HRT #QueerMed #CitedRx",
       "source_url": "https://citedrx.com/research/gender-affirming-hrt/articles/queermed-vs-queerdoc/",
-      "image_status": "pending",
-      "post_status": "draft"
+      "image_status": "deployed",
+      "post_status": "ready"
+    },
+    {
+      "id": "2026-11-21-psa-henry-meds-lawsuit",
+      "pillar": "safety_psa",
+      "scheduled_for": "2026-11-21",
+      "image_headline": "Compounded Tirzepatide's Legal Problem",
+      "image_subhead": "Eli Lilly's lawsuit against Henry Meds is heading to trial",
+      "caption_base": "Eli Lilly's lawsuit against Henry Meds — over marketing compounded tirzepatide as \"personalized\" medicine — is heading toward trial: a federal judge denied Henry Meds' motion to dismiss on September 24, 2026.\n\nHenry Meds ranks 21st of the 21 GLP-1 telehealth providers we track (2.3/10), largely for this exact reason: no major GLP-1 clinical trial has tested a compounded formulation, so the evidence doesn't transfer the way it does for branded-primary providers.\n\nFull regulatory breakdown of all 21 providers — link in bio.",
+      "hashtags_ig": "#GLP1 #Tirzepatide #EliLilly #WeightLossTelehealth #TelehealthFacts #CitedRx",
+      "source_url": "https://citedrx.com/weight-loss/",
+      "image_status": "deployed",
+      "post_status": "posted",
+      "fb_post_id": "1329691640234984_122126306445489075",
+      "ig_media_id": "18037472777903267",
+      "posted_at": "2026-11-22T12:38:20Z",
+      "_note": "Posted twice (2026-11-21 and 2026-11-22) due to a scheduled-task bug that never pushed queue.json back to the repo; IDs here are the second (2026-11-22) post. See git history around 2026-11-23 for the fix and root-cause note."
+    },
+    {
+      "id": "2026-11-22-trust-talkspace-betterhelp-accountability",
+      "pillar": "trust_methodology",
+      "scheduled_for": "2026-11-22",
+      "image_headline": "Same category, different accountability",
+      "image_subhead": "One of these had a $7.8M FTC settlement",
+      "caption_base": "Talkspace (7.3/10) and BetterHelp (7.1/10) are nearly tied on CitedRx Score — but only one has a federal enforcement record. In 2023, the FTC settled with BetterHelp for $7.8M over sharing users' mental-health questionnaire answers with advertisers, including Facebook and Snapchat, without adequate consent.\n\nThe other practical difference: Talkspace accepts insurance more broadly, while BetterHelp generally doesn't bill insurance directly.\n\nFull comparison — pricing, insurance, and the FTC settlement details — link in bio.",
+      "hashtags_ig": "#BetterHelp #Talkspace #OnlineTherapy #MentalHealthTelehealth #TelehealthFacts #CitedRx",
+      "source_url": "https://citedrx.com/research/mental-health/articles/betterhelp-vs-talkspace/",
+      "image_status": "deployed",
+      "post_status": "ready"
+    },
+    {
+      "id": "2026-11-23-news-nad-fact-check",
+      "pillar": "news_reaction",
+      "scheduled_for": "2026-11-23",
+      "image_headline": "NAD+ claims, fact-checked",
+      "image_subhead": "The lifespan data comes from mice, not people",
+      "caption_base": "NPR recently asked the question most NAD+ ads skip over: does it actually work? Here's the trail. The \"~20% longer lifespan\" stat behind a lot of NMN marketing comes from a single 2024 study — in mice bred for premature aging, not normal aging, and not humans.\n\nWhat IS proven in people: NMN safely raises NAD+ blood levels at doses up to 1,250mg/day. That's real. Lifespan extension isn't tested in humans yet, for any brand.\n\nWe broke down every human trial, plus NMN's wild 2022→2025 legal rollercoaster with the FDA — link in bio.",
+      "hashtags_ig": "#NAD #NMN #Longevity #AntiAging #LongevityScience #EvidenceBased #CitedRx",
+      "source_url": "https://citedrx.com/research/longevity/",
+      "image_status": "deployed",
+      "post_status": "ready"
+    },
+    {
+      "id": "2026-11-24-explainer-gender-affirming-insurance",
+      "pillar": "explainer",
+      "scheduled_for": "2026-11-24",
+      "image_headline": "Does insurance cover this?",
+      "image_subhead": "It depends entirely on which provider you pick",
+      "caption_base": "Insurance coverage for gender-affirming hormone therapy isn't one-size-fits-all — it comes down to which telehealth provider you choose. FOLX Health, Transhealth, and Circle Medical bill major insurance directly. QueerMed and QueerDoc run mostly sliding-scale self-pay, though labs and prescriptions can sometimes still go through insurance.\n\nSame category, very different costs depending on where you start.\n\nWe break down all 6 providers we track — coverage model, state availability, and CitedRx Score — link in bio.",
+      "hashtags_ig": "#GenderAffirmingCare #TransHealthcare #HRT #TelehealthFacts #InsuranceCoverage #CitedRx",
+      "source_url": "https://citedrx.com/gender-affirming-hrt/",
+      "image_status": "deployed",
+      "post_status": "ready"
+    },
+    {
+      "id": "2026-11-25-mythbust-trt-hypogonadism",
+      "pillar": "mythbust",
+      "scheduled_for": "2026-11-25",
+      "image_headline": "TRT didn't increase heart attacks",
+      "image_subhead": "A 5,246-person trial found something surprising",
+      "caption_base": "The 2023 TRAVERSE trial followed 5,246 men and found testosterone replacement therapy (TRT) was no worse than placebo for major cardiovascular events (7.0% vs. 7.3%) — a finding that surprised a lot of doctors who'd been cautious about TRT for exactly that reason.\n\nBut there's a catch: TRT is FDA-approved specifically for hypogonadism — lab-confirmed low testosterone plus symptoms — not just \"feeling low energy.\" A provider skipping bloodwork before prescribing is working outside what TRAVERSE, or any trial, actually studied.\n\nWe score 9 TRT telehealth providers on exactly that distinction — who requires labs, who doesn't. Link in bio.",
+      "hashtags_ig": "#TRT #Testosterone #LowT #MensHealth #TelehealthFacts #HormoneTherapy #CitedRx",
+      "source_url": "https://citedrx.com/research/testosterone/",
+      "image_status": "deployed",
+      "post_status": "ready"
+    },
+    {
+      "id": "2026-11-26-news-hrt-black-box-warning",
+      "pillar": "news_reaction",
+      "scheduled_for": "2026-11-26",
+      "image_headline": "The FDA just reversed 20 years of fear",
+      "image_subhead": "HRT's black-box warning is gone. Here's why.",
+      "caption_base": "In February 2026, the FDA approved label changes removing boxed-warning language on cardiovascular disease, breast cancer, and dementia from several menopausal hormone therapy products — the same warning that triggered a 20-year drop in HRT use after one 2002 study.\n\nThat study (WHI) was real, but its average participant was 63 — a decade past typical menopause onset. Reanalyzed by age, the picture looks very different for women starting HRT within 10 years of menopause.\n\nNAMS and ACOG are clear: this isn't \"risk-free,\" just re-evaluated. We broke down all 9 menopause telehealth providers on how closely their prescribing follows the current evidence — link in bio.",
+      "hashtags_ig": "#Menopause #HRT #HormoneTherapy #WomensHealth #FDA #MenopauseTelehealth #CitedRx",
+      "source_url": "https://citedrx.com/research/menopause/",
+      "image_status": "deployed",
+      "post_status": "ready"
+    },
+    {
+      "id": "2026-11-27-trust-hims-reviews-vs-rank",
+      "pillar": "trust_methodology",
+      "scheduled_for": "2026-11-27",
+      "image_headline": "Our #1 ED provider has 3.0/5 reviews",
+      "image_subhead": "Here's why it still ranks first",
+      "caption_base": "Hims ranks #1 of 10 ED telehealth providers we track (8.8/10) — but its Trustpilot rating is just 3.0/5 across roughly 8,000 reviews, the lowest of any top-tier provider we compare.\n\nHow both can be true: our CitedRx Score weighs evidence match, regulatory standing, and clinical model far more heavily than star ratings alone — and yes, that score already reflects a real deduction for the FTC and Utah Attorney General's July 2026 lawsuit over Hims's cancellation practices and data sharing.\n\nFull methodology and the complete review — link in bio.",
+      "hashtags_ig": "#Hims #ErectileDysfunction #TelehealthFacts #TrustworthyReviews #CitedRx",
+      "source_url": "https://citedrx.com/research/erectile-dysfunction/articles/hims-review/",
+      "image_status": "deployed",
+      "post_status": "ready"
     }
   ]
 }
