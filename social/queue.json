@@ -106,7 +106,11 @@
       "hashtags_ig": "#BetterHelp #Talkspace #OnlineTherapy #MentalHealthTelehealth #TelehealthFacts #CitedRx",
       "source_url": "https://citedrx.com/research/mental-health/articles/betterhelp-vs-talkspace/",
       "image_status": "deployed",
-      "post_status": "ready"
+      "post_status": "posted",
+      "fb_post_id": "1329691640234984_122126563101489075",
+      "ig_media_id": "18403524460202886",
+      "posted_at": "2026-11-23T12:38:03Z",
+      "_note": "Posted twice (2026-11-23 06:23 and 12:38 UTC) due to the same scheduled-task git-push issue; see root-cause note in the 2026-11-21 entry and CLAUDE.md discussion around 2026-11-24."
     },
     {
       "id": "2026-11-23-news-nad-fact-check",
